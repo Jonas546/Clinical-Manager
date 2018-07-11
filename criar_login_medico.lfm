@@ -1,0 +1,119 @@
+object criar_login_medico: Tcriar_login_medico
+  Left = 256
+  Height = 190
+  Top = 128
+  Width = 303
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Criar Login Médico'
+  ClientHeight = 190
+  ClientWidth = 303
+  Color = clWindow
+  OnClose = FormClose
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '1.6.4.0'
+  object cb_medico: TDBLookupComboBox
+    Left = 88
+    Height = 23
+    Top = 27
+    Width = 180
+    KeyField = 'ID'
+    ListField = 'NOME'
+    ListFieldIndex = 0
+    ListSource = DM.ds_medico_ativo
+    LookupCache = False
+    OnChange = cb_medicoChange
+    TabOrder = 0
+  end
+  object Label1: TLabel
+    Left = 32
+    Height = 18
+    Top = 27
+    Width = 43
+    Caption = 'Nome'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clGray
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object txt_login: TEdit
+    Left = 88
+    Height = 23
+    Top = 64
+    Width = 180
+    TabOrder = 1
+  end
+  object txt_senha: TEdit
+    Left = 88
+    Height = 23
+    Top = 96
+    Width = 180
+    EchoMode = emPassword
+    PasswordChar = '*'
+    TabOrder = 2
+  end
+  object Label2: TLabel
+    Left = 32
+    Height = 18
+    Top = 64
+    Width = 41
+    Caption = 'Login'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clGray
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 32
+    Height = 18
+    Top = 101
+    Width = 46
+    Caption = 'Senha'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clGray
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object btn_registrar: TButton
+    Left = 64
+    Height = 25
+    Top = 136
+    Width = 75
+    Caption = 'Registrar'
+    OnClick = btn_registrarClick
+    TabOrder = 3
+  end
+  object btn_atualizar: TButton
+    Left = 160
+    Height = 25
+    Top = 136
+    Width = 75
+    Caption = 'Atualizar'
+    OnClick = btn_atualizarClick
+    TabOrder = 4
+  end
+  object db_txt_id: TEdit
+    Left = 16
+    Height = 23
+    Top = 136
+    Width = 24
+    Enabled = False
+    TabOrder = 5
+    Visible = False
+  end
+end

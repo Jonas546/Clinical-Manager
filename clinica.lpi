@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="10"/>
+    <PathDelim Value="\"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="clinica"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="5">
+      <Item1>
+        <PackageName Value="fortes324forlaz"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="DateTimeCtrls"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="FCL"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="SQLDBLaz"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="LCL"/>
+      </Item5>
+    </RequiredPackages>
+    <Units Count="101">
+      <Unit0>
+        <Filename Value="clinica.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="inicial.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_inicial"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="login.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_login"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="dm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DM"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="home.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_home"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="resgistrar_atendente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_registrar_atendente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="gerenciar_atendentes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="gerenciar_atendentes"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="criar_login_atendente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="login_atendente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="registrar_medico.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_registrar_medico"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="gerenciar_medicos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_gerenciar_medico"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="criar_login_medico.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="criar_login_medico"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="registrar_paciente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_registrar_paciente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="gerenciar_paciente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_gerenciar_pacientes"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="agendamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_agendamento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="agenda_medica.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_agenda_medica"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="consultas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_consultas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="consulta_podologo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_consulta_podologo"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="consulta_infectologista.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_consulta_infectologista"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="consulta_cardiologista.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_consulta_cardiologista"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="podologo_relatorio_semanal_atendimento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_podologo_relatorio_semanal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="podologo_relatorio_mensal_atendimento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_podologo_relatorio_mensal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="podologo_relatorio_anual_atendimento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_podologo_rel_anual"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="podologo_relatorio_semanal_atendimento_pdf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_podologo_rel_semanal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="infectologista_relatorio_semanal_atendimento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_if_relatorio_semanal_atendimento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="infectologista_relatorio_mensal_atendimento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_if_rel_mensal_atendimento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="infectologista_relatorio_anual_atendimento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_if_rel_anual_atendimento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="podologo_relatorio_mensal_atendimento_pdf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_podologo_rel_mensal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="podologo_relatorio_anual_atendimento_pdf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_rel_anual_atendimento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="historico_paciente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_historico"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="historico_paciente_pdf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_historico_pdf"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="agenda_diaria.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_agenda_diaria"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="consulta_oftalmo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_consulta_oftalmo"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="consulta_dentista.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_consulta_dentista"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="dentista_relatorio_semanal_atendimento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_dentista_relatorio_semanal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="dentista_relatorio_mensal_atendimento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_dentista_relatorio_mensal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="dentista_relatorio_anual_atendimento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_dentista_relatorio_anual"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="agenda_diaria_pdf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_agenda_pdf"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="podologo_agenda.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_podologo_agenda"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="dentista_agenda.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_dentista_atendimento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="prodedimento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_procedimento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="gerenciar_procedimento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_gerenciar_proc"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="gerenciar_procedimentos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_gerenciar_procedimentos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="orcamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_orcamento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="orcamento_pdf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_orcamento_pdf"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="lancamento_convenio.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_lancamento_convenio"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="lista_procedimentos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_procedimentos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="registrar_convenio.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_convenio"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="gerenciar_convenio.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_gerenciar_convenio"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="podologo_orcamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_podologo_orcamento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="podologo_procedimentos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_podologo_procedimentos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="podologo_gerenciar_proc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_po_gerenciar_procedimentos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit50>
+      <Unit51>
+        <Filename Value="registrar_empresa.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_registrar_empresa"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit51>
+      <Unit52>
+        <Filename Value="gerenciar_empresas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_gerenciar_empresa"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit52>
+      <Unit53>
+        <Filename Value="podologo_materiais.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_podologo_materiais"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit53>
+      <Unit54>
+        <Filename Value="registrar_plano.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_registrar_plano"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit54>
+      <Unit55>
+        <Filename Value="gerenciar_plano.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_gerenciar_plano"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit55>
+      <Unit56>
+        <Filename Value="dmo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DMO"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+      </Unit56>
+      <Unit57>
+        <Filename Value="relatorio_convenio.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_relatorio_convenio"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit57>
+      <Unit58>
+        <Filename Value="lancar_guia.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_lancar_guia"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit58>
+      <Unit59>
+        <Filename Value="relatorio_convenio_pdf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_relatorio_convenio_pdf"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit59>
+      <Unit60>
+        <Filename Value="dentista_materiais.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_dentista_materiais"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit60>
+      <Unit61>
+        <Filename Value="podologo_orcamento_pdf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_podologo_orcamento_pdf"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit61>
+      <Unit62>
+        <Filename Value="dentista_orcamento_pdf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_dentista_orcamento_pdf"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit62>
+      <Unit63>
+        <Filename Value="infectologista_agenda.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_infectologista_agenda"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit63>
+      <Unit64>
+        <Filename Value="infectologista_orcamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_infectologista_orcamento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit64>
+      <Unit65>
+        <Filename Value="infectologista_orcamento_pdf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_infectologista_orcamento_pdf"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit65>
+      <Unit66>
+        <Filename Value="infectologista_procedimentos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_inf_procedimentos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit66>
+      <Unit67>
+        <Filename Value="inf_gerenciar_proc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_inf_gerenciar_proc"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit67>
+      <Unit68>
+        <Filename Value="infectologista_materiais.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_inf_materiais"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit68>
+      <Unit69>
+        <Filename Value="cardiologista_procedimentos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_cardiolgista_procedimentos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit69>
+      <Unit70>
+        <Filename Value="cardiologista_gerenciar_proc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_cardiologista_gerenciar_proc"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit70>
+      <Unit71>
+        <Filename Value="relatorio_convenio_pdf2.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_relatorio_convenio_pdf2"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit71>
+      <Unit72>
+        <Filename Value="relatorio_convenio_pdf3.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_relatorio_convenio_pdf3"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit72>
+      <Unit73>
+        <Filename Value="relatorio_convenio_pdf4.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_relatorio_convenio_pdf4"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit73>
+      <Unit74>
+        <Filename Value="relatorio_convenio_pdf5.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_relatorio_convenio_pdf5"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit74>
+      <Unit75>
+        <Filename Value="relatorio_convenio_pdf6.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_relatorio_convenio_pdf6"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit75>
+      <Unit76>
+        <Filename Value="medico_relatorio.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_medico_relatorio"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit76>
+      <Unit77>
+        <Filename Value="relatorio_atendimento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_relatorio_atendimento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit77>
+      <Unit78>
+        <Filename Value="relatorio_atendimento_pdf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_relatorio_atendimento_pdf"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit78>
+      <Unit79>
+        <Filename Value="cardiologista_proc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_cardiologista_proc"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit79>
+      <Unit80>
+        <Filename Value="cardiologista_agenda.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_cardiologista_agenda"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit80>
+      <Unit81>
+        <Filename Value="cardiologista_orcamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_cardiologista_orcamento"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit81>
+      <Unit82>
+        <Filename Value="cardiologista_materiais.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_cardiologista_materiais"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit82>
+      <Unit83>
+        <Filename Value="cardiologista_orcamento_pdf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cardiologista_orcamento_pdf"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit83>
+      <Unit84>
+        <Filename Value="oftalmo_proc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_oftalmo_proc"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit84>
+      <Unit85>
+        <Filename Value="oftalmo_gerenciar_proc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_oftalmo_gerenciar_proc"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit85>
+      <Unit86>
+        <Filename Value="oftalmo_agenda.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_oftalmo_agenda"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit86>
+      <Unit87>
+        <Filename Value="oftalmo_orcamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_oftalmo_orcamento"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit87>
+      <Unit88>
+        <Filename Value="oftalmo_orcamento_pdf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_oftalmo_orcamento_pdf"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit88>
+      <Unit89>
+        <Filename Value="oftalmo_materiais.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_oftalmo_materiais"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit89>
+      <Unit90>
+        <Filename Value="relatorio_financeiro.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_relatorio_financeiro"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit90>
+      <Unit91>
+        <Filename Value="visualiza_financeiro.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_visualiza_financeiro"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit91>
+      <Unit92>
+        <Filename Value="relatorio_financeiro_pdf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_relatorio_financeiro_pdf"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit92>
+      <Unit93>
+        <Filename Value="despesa.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_despesas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit93>
+      <Unit94>
+        <Filename Value="relatorio_despesa.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_relatorio_despesa"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit94>
+      <Unit95>
+        <Filename Value="registar_gastos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_registrar_gastos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit95>
+      <Unit96>
+        <Filename Value="relatorio_gastos_pdf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_relatorio_gastos_pdf"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit96>
+      <Unit97>
+        <Filename Value="nome_clinica.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_nome_clinica"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit97>
+      <Unit98>
+        <Filename Value="registrar_logotipo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_logotipo"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit98>
+      <Unit99>
+        <Filename Value="relatorio_convenio_2pdf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_relatorio_entrega2"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit99>
+      <Unit100>
+        <Filename Value="dentista_gerenciar_proc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="t_dentista_proc"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit100>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="clinica"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

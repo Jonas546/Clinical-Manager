@@ -1,0 +1,511 @@
+object t_consulta_cardiologista: Tt_consulta_cardiologista
+  Left = 257
+  Height = 385
+  Top = 122
+  Width = 756
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Consultas - Cardiologista'
+  ClientHeight = 365
+  ClientWidth = 756
+  Color = clWindow
+  Menu = MainMenu1
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.6.4.0'
+  object GroupBox1: TGroupBox
+    Left = 23
+    Height = 120
+    Top = 16
+    Width = 353
+    Caption = 'Dados da Guia'
+    ClientHeight = 100
+    ClientWidth = 349
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 8
+      Height = 16
+      Top = 8
+      Width = 56
+      Caption = 'Paciente'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object db_txt_nome: TDBEdit
+      Left = 72
+      Height = 23
+      Top = 1
+      Width = 264
+      DataField = 'NOME'
+      DataSource = DM.ds_cardiologista
+      CharCase = ecNormal
+      Enabled = False
+      MaxLength = 0
+      TabOrder = 0
+    end
+    object Label2: TLabel
+      Left = 8
+      Height = 16
+      Top = 39
+      Width = 27
+      Caption = 'Guia'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object db_txt_guia: TDBEdit
+      Left = 72
+      Height = 23
+      Top = 32
+      Width = 41
+      DataField = 'GUIA'
+      DataSource = DM.ds_cardiologista
+      CharCase = ecNormal
+      Enabled = False
+      MaxLength = 0
+      TabOrder = 1
+    end
+    object Label3: TLabel
+      Left = 120
+      Height = 16
+      Top = 39
+      Width = 29
+      Caption = 'Mat.'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object db_txt_id_paciente: TDBEdit
+      Left = 152
+      Height = 23
+      Top = 32
+      Width = 48
+      DataField = 'COD_PACIENTE'
+      DataSource = DM.ds_cardiologista
+      CharCase = ecNormal
+      Enabled = False
+      MaxLength = 0
+      TabOrder = 2
+    end
+    object Label4: TLabel
+      Left = 8
+      Height = 16
+      Top = 72
+      Width = 59
+      Caption = 'Convênio'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object db_txt_convenio: TDBEdit
+      Left = 80
+      Height = 23
+      Top = 64
+      Width = 112
+      DataField = 'CONVENIO'
+      DataSource = DM.ds_cardiologista
+      CharCase = ecNormal
+      Enabled = False
+      MaxLength = 0
+      TabOrder = 3
+    end
+    object Label5: TLabel
+      Left = 200
+      Height = 16
+      Top = 72
+      Width = 55
+      Caption = 'Validade'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object db_txt_validade: TDBEdit
+      Left = 264
+      Height = 23
+      Top = 65
+      Width = 72
+      DataField = 'VALIDADE'
+      DataSource = DM.ds_cardiologista
+      CharCase = ecNormal
+      Enabled = False
+      MaxLength = 0
+      TabOrder = 4
+    end
+    object Label12: TLabel
+      Left = 207
+      Height = 16
+      Top = 39
+      Width = 26
+      Caption = 'Tipo'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object db_txt_tipo: TDBEdit
+      Left = 240
+      Height = 23
+      Top = 32
+      Width = 95
+      DataField = 'TIPO_CONSULTA'
+      DataSource = DM.ds_cardiologista
+      CharCase = ecNormal
+      Enabled = False
+      MaxLength = 0
+      TabOrder = 5
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 384
+    Height = 152
+    Top = 16
+    Width = 352
+    Caption = 'Procedimentos'
+    ClientHeight = 132
+    ClientWidth = 348
+    TabOrder = 1
+    object txt_procedimento: TMemo
+      Left = 16
+      Height = 88
+      Top = 32
+      Width = 320
+      Lines.Strings = (
+        'txt_procedimento'
+      )
+      TabOrder = 0
+    end
+    object Label8: TLabel
+      Left = 16
+      Height = 16
+      Top = 8
+      Width = 246
+      Caption = 'Digite Abaixo os Procedimentos Feitos'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object GroupBox3: TGroupBox
+    Left = 22
+    Height = 57
+    Top = 144
+    Width = 354
+    Caption = 'Consulta'
+    ClientHeight = 37
+    ClientWidth = 350
+    TabOrder = 2
+    object Label6: TLabel
+      Left = 16
+      Height = 16
+      Top = 8
+      Width = 31
+      Caption = 'Data'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object db_txt_data: TDBEdit
+      Left = 80
+      Height = 23
+      Top = 1
+      Width = 114
+      DataField = 'DATA_CONSULTA'
+      DataSource = DM.ds_cardiologista
+      CharCase = ecNormal
+      Enabled = False
+      MaxLength = 0
+      TabOrder = 0
+    end
+    object Label7: TLabel
+      Left = 208
+      Height = 16
+      Top = 8
+      Width = 31
+      Caption = 'Hora'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object db_txt_hora: TDBEdit
+      Left = 248
+      Height = 23
+      Top = 1
+      Width = 88
+      DataField = 'HORA'
+      DataSource = DM.ds_cardiologista
+      CharCase = ecNormal
+      Enabled = False
+      MaxLength = 0
+      TabOrder = 1
+    end
+  end
+  object btn_salvar: TButton
+    Left = 384
+    Height = 48
+    Top = 296
+    Width = 88
+    Caption = 'Salvar Dados'
+    OnClick = btn_salvarClick
+    TabOrder = 3
+  end
+  object btn_finalizar: TButton
+    Left = 600
+    Height = 48
+    Top = 296
+    Width = 136
+    Caption = 'Finalizar Atendimento'
+    OnClick = btn_finalizarClick
+    TabOrder = 4
+  end
+  object Label9: TLabel
+    Left = 24
+    Height = 15
+    Top = 344
+    Width = 34
+    Caption = 'Label9'
+    ParentColor = False
+    Visible = False
+  end
+  object Label10: TLabel
+    Left = 64
+    Height = 15
+    Top = 344
+    Width = 40
+    Caption = 'Label10'
+    ParentColor = False
+    Visible = False
+  end
+  object GroupBox4: TGroupBox
+    Left = 23
+    Height = 57
+    Top = 288
+    Width = 354
+    Caption = 'Tipo de Procedimento'
+    ClientHeight = 37
+    ClientWidth = 350
+    TabOrder = 5
+    object Label11: TLabel
+      Left = 15
+      Height = 16
+      Top = 8
+      Width = 61
+      Caption = 'Selecione'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object cb_tipo: TComboBox
+      Left = 80
+      Height = 23
+      Top = 1
+      Width = 100
+      ItemHeight = 15
+      TabOrder = 0
+    end
+  end
+  object GroupBox5: TGroupBox
+    Left = 22
+    Height = 88
+    Top = 200
+    Width = 354
+    Caption = 'Lista de Procedimentos'
+    ClientHeight = 68
+    ClientWidth = 350
+    TabOrder = 6
+    object Label13: TLabel
+      Left = 15
+      Height = 16
+      Top = 8
+      Width = 61
+      Caption = 'Selecione'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object cb_lista_procedimento: TDBLookupComboBox
+      Left = 82
+      Height = 23
+      Top = 1
+      Width = 255
+      KeyField = 'VALOR'
+      ListField = 'PROC'
+      ListFieldIndex = 0
+      ListSource = DM.list_cardiologista
+      LookupCache = False
+      OnChange = cb_lista_procedimentoChange
+      TabOrder = 0
+    end
+    object Label14: TLabel
+      Left = 16
+      Height = 16
+      Top = 36
+      Width = 34
+      Caption = 'Valor'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object txt_valor: TEdit
+      Left = 82
+      Height = 23
+      Top = 29
+      Width = 80
+      Enabled = False
+      TabOrder = 1
+    end
+  end
+  object GroupBox6: TGroupBox
+    Left = 384
+    Height = 121
+    Top = 168
+    Width = 353
+    Caption = 'Materiais'
+    ClientHeight = 101
+    ClientWidth = 349
+    TabOrder = 7
+    object Label15: TLabel
+      Left = 16
+      Height = 16
+      Top = 0
+      Width = 218
+      Caption = 'Digite Abaixo os Materiais Usados'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object txt_material: TMemo
+      Left = 16
+      Height = 34
+      Top = 24
+      Width = 320
+      Lines.Strings = (
+        'txt_material'
+      )
+      TabOrder = 0
+    end
+    object Label16: TLabel
+      Left = 16
+      Height = 16
+      Top = 68
+      Width = 35
+      Caption = 'Qtde.'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object txt_qtde: TEdit
+      Left = 64
+      Height = 23
+      Top = 68
+      Width = 48
+      NumbersOnly = True
+      TabOrder = 1
+    end
+  end
+  object Button1: TButton
+    Left = 480
+    Height = 49
+    Top = 296
+    Width = 112
+    Caption = 'Registrar Material'
+    OnClick = Button1Click
+    TabOrder = 8
+  end
+  object MainMenu1: TMainMenu
+    left = 156
+    top = 357
+    object MenuItem1: TMenuItem
+      Caption = 'Orçamento'
+      OnClick = MenuItem1Click
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Materiais'
+      OnClick = MenuItem2Click
+    end
+  end
+end
