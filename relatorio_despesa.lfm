@@ -1,0 +1,163 @@
+object t_relatorio_despesa: Tt_relatorio_despesa
+  Left = 260
+  Height = 304
+  Top = 120
+  Width = 580
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Relatório de Despesas'
+  ClientHeight = 304
+  ClientWidth = 580
+  Color = clWindow
+  OnClose = FormClose
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.6.4.0'
+  object DBGrid1: TDBGrid
+    Left = 16
+    Height = 176
+    Top = 112
+    Width = 552
+    Color = clWindow
+    Columns = <>
+    DataSource = DMO.ds_despesa
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object Label1: TLabel
+    Left = 16
+    Height = 14
+    Top = 16
+    Width = 57
+    Caption = 'Descrição'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clGray
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object db_txt_desc: TDBEdit
+    Left = 88
+    Height = 23
+    Top = 8
+    Width = 288
+    DataField = 'DESC'
+    DataSource = DMO.ds_despesa
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 1
+  end
+  object Label2: TLabel
+    Left = 384
+    Height = 14
+    Top = 16
+    Width = 30
+    Caption = 'Qtde'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clGray
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object db_txt_qtde: TDBEdit
+    Left = 424
+    Height = 23
+    Top = 7
+    Width = 40
+    DataField = 'QTDE'
+    DataSource = DMO.ds_despesa
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 2
+  end
+  object Label3: TLabel
+    Left = 472
+    Height = 14
+    Top = 16
+    Width = 31
+    Caption = 'Valor'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clGray
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object db_txt_valor: TDBEdit
+    Left = 512
+    Height = 23
+    Top = 7
+    Width = 56
+    DataField = 'VALOR'
+    DataSource = DMO.ds_despesa
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 3
+  end
+  object Label4: TLabel
+    Left = 16
+    Height = 14
+    Top = 48
+    Width = 66
+    Caption = 'Valor Total'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clGray
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object db_txt_total: TDBEdit
+    Left = 88
+    Height = 23
+    Top = 40
+    Width = 80
+    DataField = 'CAST'
+    DataSource = DMO.ds_valor_total
+    CharCase = ecNormal
+    Enabled = False
+    MaxLength = 0
+    TabOrder = 4
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 16
+    Height = 32
+    Top = 72
+    Width = 553
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 32
+    ClientWidth = 553
+    DataSource = DMO.ds_despesa
+    Options = []
+    TabOrder = 5
+    VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbDelete, nbEdit, nbPost, nbCancel, nbRefresh]
+  end
+  object Button1: TButton
+    Left = 424
+    Height = 25
+    Top = 37
+    Width = 145
+    Caption = 'Gerar PDF'
+    OnClick = Button1Click
+    TabOrder = 6
+  end
+end

@@ -1,0 +1,293 @@
+object t_relatorio_financeiro: Tt_relatorio_financeiro
+  Left = 76
+  Height = 226
+  Top = 114
+  Width = 921
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Relatório Financeiro de Atendimento'
+  ClientHeight = 226
+  ClientWidth = 921
+  Color = clWindow
+  OnClose = FormClose
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.6.4.0'
+  object GroupBox1: TGroupBox
+    Left = 8
+    Height = 48
+    Top = 8
+    Width = 105
+    Caption = 'Data Início'
+    ClientHeight = 28
+    ClientWidth = 101
+    TabOrder = 0
+    object data_inicio: TDateTimePicker
+      Left = 8
+      Height = 23
+      Top = 0
+      Width = 83
+      CenturyFrom = 1941
+      MaxDate = 2958465
+      MinDate = -53780
+      TabOrder = 0
+      TrailingSeparator = False
+      TextForNullDate = 'NULL'
+      LeadingZeros = True
+      Kind = dtkDate
+      TimeFormat = tf24
+      TimeDisplay = tdHMS
+      DateMode = dmComboBox
+      Date = 43012
+      Time = 0.633233923610533
+      UseDefaultSeparators = True
+      HideDateTimeParts = []
+      MonthNames = 'Long'
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 120
+    Height = 49
+    Top = 8
+    Width = 105
+    Caption = 'Data Fim'
+    ClientHeight = 29
+    ClientWidth = 101
+    TabOrder = 1
+    object data_fim: TDateTimePicker
+      Left = 8
+      Height = 23
+      Top = 0
+      Width = 83
+      CenturyFrom = 1941
+      MaxDate = 2958465
+      MinDate = -53780
+      TabOrder = 0
+      TrailingSeparator = False
+      TextForNullDate = 'NULL'
+      LeadingZeros = True
+      Kind = dtkDate
+      TimeFormat = tf24
+      TimeDisplay = tdHMS
+      DateMode = dmComboBox
+      Date = 43012
+      Time = 0.634187581017613
+      UseDefaultSeparators = True
+      HideDateTimeParts = []
+      MonthNames = 'Long'
+    end
+  end
+  object g_conv: TGroupBox
+    Left = 232
+    Height = 49
+    Top = 8
+    Width = 145
+    Caption = 'Convênios'
+    ClientHeight = 29
+    ClientWidth = 141
+    TabOrder = 2
+    object cb_convenio: TDBLookupComboBox
+      Left = 8
+      Height = 23
+      Top = 0
+      Width = 128
+      Enabled = False
+      KeyField = 'ID'
+      ListField = 'CONVENIO'
+      ListFieldIndex = 0
+      ListSource = DMO.ds_convenio
+      LookupCache = False
+      OnChange = cb_convenioChange
+      TabOrder = 0
+    end
+  end
+  object g_prof: TGroupBox
+    Left = 384
+    Height = 48
+    Top = 8
+    Width = 209
+    Caption = 'Profissional'
+    ClientHeight = 28
+    ClientWidth = 205
+    TabOrder = 3
+    object cb_medico: TDBLookupComboBox
+      Left = 8
+      Height = 23
+      Top = 0
+      Width = 192
+      Enabled = False
+      KeyField = 'ID'
+      ListField = 'NOME'
+      ListFieldIndex = 0
+      ListSource = DMO.ds_medicos
+      LookupCache = False
+      TabOrder = 0
+    end
+  end
+  object g_plano: TGroupBox
+    Left = 600
+    Height = 48
+    Top = 8
+    Width = 136
+    Caption = 'Plano'
+    ClientHeight = 28
+    ClientWidth = 132
+    TabOrder = 4
+    object cb_plano: TDBLookupComboBox
+      Left = 8
+      Height = 23
+      Top = 0
+      Width = 116
+      Enabled = False
+      KeyField = 'ID'
+      ListField = 'PLANO'
+      ListFieldIndex = 0
+      ListSource = DMO.ds_plano
+      LookupCache = False
+      TabOrder = 0
+    end
+  end
+  object g_empresa: TGroupBox
+    Left = 744
+    Height = 48
+    Top = 8
+    Width = 168
+    Caption = 'Empresa'
+    ClientHeight = 28
+    ClientWidth = 164
+    TabOrder = 5
+    object cb_empresa: TDBLookupComboBox
+      Left = 8
+      Height = 23
+      Top = 0
+      Width = 140
+      Enabled = False
+      KeyField = 'ID'
+      ListField = 'EMP'
+      ListFieldIndex = 0
+      ListSource = DMO.ds_empresa
+      LookupCache = False
+      TabOrder = 0
+    end
+  end
+  object txt_conv_id: TEdit
+    Left = 272
+    Height = 23
+    Top = 176
+    Width = 56
+    TabOrder = 6
+    Visible = False
+  end
+  object txt_prof: TEdit
+    Left = 336
+    Height = 23
+    Top = 176
+    Width = 48
+    TabOrder = 7
+    Visible = False
+  end
+  object txt_plano: TEdit
+    Left = 392
+    Height = 23
+    Top = 176
+    Width = 56
+    TabOrder = 8
+    Visible = False
+  end
+  object GroupBox5: TGroupBox
+    Left = 8
+    Height = 104
+    Top = 64
+    Width = 904
+    Caption = 'Critérios de Seleção'
+    ClientHeight = 84
+    ClientWidth = 900
+    TabOrder = 9
+    object rb_geral: TRadioButton
+      Left = 8
+      Height = 19
+      Top = 0
+      Width = 47
+      Caption = 'Geral'
+      OnChange = rb_geralChange
+      TabOrder = 0
+    end
+    object rb_criterio: TRadioButton
+      Left = 64
+      Height = 19
+      Top = 0
+      Width = 85
+      Caption = 'Por Critérios'
+      OnChange = rb_criterioChange
+      TabOrder = 1
+    end
+    object g_criterio: TGroupBox
+      Left = 8
+      Height = 48
+      Top = 24
+      Width = 880
+      Caption = 'Critérios'
+      ClientHeight = 28
+      ClientWidth = 876
+      Enabled = False
+      TabOrder = 2
+      object ck_c_convenio: TCheckBox
+        Left = 8
+        Height = 19
+        Top = 0
+        Width = 100
+        Caption = 'Com Convênio'
+        TabOrder = 0
+      end
+      object ck_s_convenio: TCheckBox
+        Left = 112
+        Height = 19
+        Top = 0
+        Width = 97
+        Caption = 'Sem Convênio'
+        TabOrder = 1
+      end
+      object ck_prof: TCheckBox
+        Left = 216
+        Height = 19
+        Top = 0
+        Width = 102
+        Caption = 'Por Profissional'
+        TabOrder = 2
+      end
+      object ck_plano: TCheckBox
+        Left = 320
+        Height = 19
+        Top = 0
+        Width = 71
+        Caption = 'Por Plano'
+        TabOrder = 3
+      end
+      object ck_empresa: TCheckBox
+        Left = 392
+        Height = 19
+        Top = 0
+        Width = 86
+        Caption = 'Por Empresa'
+        TabOrder = 4
+      end
+    end
+  end
+  object Button1: TButton
+    Left = 8
+    Height = 42
+    Top = 174
+    Width = 91
+    Caption = 'Listar'
+    OnClick = Button1Click
+    TabOrder = 10
+  end
+  object Button2: TButton
+    Left = 112
+    Height = 42
+    Top = 174
+    Width = 91
+    Caption = 'Gerar PDF'
+    OnClick = Button2Click
+    TabOrder = 11
+  end
+end

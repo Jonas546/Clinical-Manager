@@ -1,0 +1,48 @@
+object t_convenio: Tt_convenio
+  Left = 282
+  Height = 96
+  Top = 119
+  Width = 323
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Registrar Convênio'
+  ClientHeight = 96
+  ClientWidth = 323
+  Color = clWindow
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.6.4.0'
+  object Label1: TLabel
+    Left = 24
+    Height = 16
+    Top = 24
+    Width = 59
+    Caption = 'Convênio'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clGray
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object txt_convenio: TEdit
+    Left = 96
+    Height = 23
+    Top = 17
+    Width = 200
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 128
+    Height = 25
+    Top = 48
+    Width = 75
+    Caption = 'Registrar'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+end
