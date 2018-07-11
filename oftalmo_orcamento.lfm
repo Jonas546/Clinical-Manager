@@ -1,0 +1,254 @@
+object t_oftalmo_orcamento: Tt_oftalmo_orcamento
+  Left = 260
+  Height = 379
+  Top = 120
+  Width = 646
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Oftalmologista - Orçamento'
+  ClientHeight = 379
+  ClientWidth = 646
+  Color = clWindow
+  OnClose = FormClose
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.6.4.0'
+  object DBGrid1: TDBGrid
+    Left = 16
+    Height = 192
+    Top = 168
+    Width = 616
+    Color = clWindow
+    Columns = <>
+    DataSource = DM.ds_itens
+    TabOrder = 0
+  end
+  object GroupBox1: TGroupBox
+    Left = 16
+    Height = 56
+    Top = 16
+    Width = 616
+    Caption = 'Consulta'
+    ClientHeight = 36
+    ClientWidth = 612
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 120
+      Height = 16
+      Top = 7
+      Width = 56
+      Caption = 'Paciente'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object db_txt_nome: TDBEdit
+      Left = 184
+      Height = 23
+      Top = 0
+      Width = 280
+      CharCase = ecNormal
+      Enabled = False
+      MaxLength = 0
+      TabOrder = 0
+    end
+    object Label2: TLabel
+      Left = 16
+      Height = 16
+      Top = 7
+      Width = 27
+      Caption = 'Guia'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object db_txt_guia: TDBEdit
+      Left = 56
+      Height = 23
+      Top = 0
+      Width = 48
+      DataField = 'GUIA'
+      CharCase = ecNormal
+      Enabled = False
+      MaxLength = 0
+      TabOrder = 1
+    end
+    object Label3: TLabel
+      Left = 472
+      Height = 16
+      Top = 7
+      Width = 60
+      Caption = 'Matrícula'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object db_txt_id_paciente: TDBEdit
+      Left = 544
+      Height = 23
+      Top = 0
+      Width = 56
+      CharCase = ecNormal
+      Enabled = False
+      MaxLength = 0
+      TabOrder = 2
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 16
+    Height = 57
+    Top = 72
+    Width = 432
+    Caption = 'Médico'
+    ClientHeight = 37
+    ClientWidth = 428
+    TabOrder = 2
+    object Label4: TLabel
+      Left = 16
+      Height = 16
+      Top = 7
+      Width = 35
+      Caption = 'Nome'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object txt_medico: TEdit
+      Left = 56
+      Height = 23
+      Top = 0
+      Width = 360
+      Enabled = False
+      TabOrder = 0
+    end
+  end
+  object GroupBox3: TGroupBox
+    Left = 456
+    Height = 57
+    Top = 72
+    Width = 176
+    Caption = 'Financeiro'
+    ClientHeight = 37
+    ClientWidth = 172
+    TabOrder = 3
+    object Label5: TLabel
+      Left = 16
+      Height = 16
+      Top = 7
+      Width = 70
+      Caption = 'Valor Total'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object txt_total: TMaskEdit
+      Left = 104
+      Height = 23
+      Top = 0
+      Width = 56
+      CharCase = ecNormal
+      Enabled = False
+      MaxLength = 0
+      TabOrder = 0
+      SpaceChar = '_'
+    end
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 16
+    Height = 26
+    Top = 136
+    Width = 224
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 26
+    ClientWidth = 224
+    DataSource = DM.ds_itens
+    Options = []
+    TabOrder = 4
+    VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+  end
+  object Button1: TButton
+    Left = 504
+    Height = 26
+    Top = 136
+    Width = 128
+    Caption = 'Orçamento em PDF'
+    OnClick = Button1Click
+    TabOrder = 5
+  end
+  object Button2: TButton
+    Left = 376
+    Height = 27
+    Top = 136
+    Width = 120
+    Caption = 'Excluir Item'
+    OnClick = Button2Click
+    TabOrder = 6
+  end
+  object Button3: TButton
+    Left = 248
+    Height = 25
+    Top = 137
+    Width = 120
+    Caption = 'Confirmar'
+    OnClick = Button3Click
+    TabOrder = 7
+  end
+  object db_txt_id: TDBEdit
+    Left = 16
+    Height = 23
+    Top = 356
+    Width = 80
+    DataField = 'ID'
+    DataSource = DM.ds_itens
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 8
+    Visible = False
+  end
+  object txt_v_consulta: TMaskEdit
+    Left = 112
+    Height = 23
+    Top = 356
+    Width = 80
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 9
+    Visible = False
+    SpaceChar = '_'
+  end
+end

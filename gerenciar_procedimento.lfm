@@ -1,0 +1,111 @@
+object t_gerenciar_proc: Tt_gerenciar_proc
+  Left = 260
+  Height = 279
+  Top = 120
+  Width = 574
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Dentista - Gerenciar Procedimentos'
+  ClientHeight = 279
+  ClientWidth = 574
+  Color = clWindow
+  OnClose = FormClose
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.6.4.0'
+  object DBGrid1: TDBGrid
+    Left = 24
+    Height = 156
+    Top = 104
+    Width = 528
+    Color = clWindow
+    Columns = <>
+    DataSource = DM.ds_dentista_proc
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 23
+    Height = 25
+    Top = 72
+    Width = 529
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 25
+    ClientWidth = 529
+    DataSource = DM.ds_dentista_proc
+    Options = []
+    TabOrder = 1
+    VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbDelete, nbEdit, nbPost, nbCancel, nbRefresh]
+  end
+  object Label1: TLabel
+    Left = 32
+    Height = 16
+    Top = 16
+    Width = 63
+    Caption = 'Descrição'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clGray
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object db_txt_desc: TDBEdit
+    Left = 112
+    Height = 23
+    Top = 9
+    Width = 440
+    DataField = 'DESCRICAO'
+    DataSource = DM.ds_dentista_proc
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 2
+  end
+  object Label2: TLabel
+    Left = 32
+    Height = 16
+    Top = 44
+    Width = 34
+    Caption = 'Valor'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clGray
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object db_txt_preco: TDBEdit
+    Left = 112
+    Height = 23
+    Top = 40
+    Width = 80
+    DataField = 'PRECO'
+    DataSource = DM.ds_dentista_proc
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 3
+  end
+  object DBEdit1: TDBEdit
+    Left = 208
+    Height = 23
+    Top = 40
+    Width = 80
+    DataField = 'ID'
+    DataSource = DM.ds_dentista_proc
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 4
+    Visible = False
+  end
+end

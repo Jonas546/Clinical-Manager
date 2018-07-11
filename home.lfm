@@ -1,0 +1,275 @@
+object t_home: Tt_home
+  Left = 320
+  Height = 297
+  Top = 113
+  Width = 554
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Home'
+  ClientHeight = 277
+  ClientWidth = 554
+  Color = clWindow
+  Menu = MainMenu1
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.6.4.0'
+  object DBText1: TDBText
+    Left = 8
+    Height = 15
+    Top = 264
+    Width = 43
+    DataField = 'COD'
+    DataSource = DM.ds_login
+    ParentColor = False
+    Visible = False
+  end
+  object DBText2: TDBText
+    Left = 17
+    Height = 15
+    Top = 264
+    Width = 43
+    DataField = 'LOGIN'
+    DataSource = DM.ds_login
+    ParentColor = False
+    Visible = False
+  end
+  object db_permission: TDBText
+    Left = 56
+    Height = 15
+    Top = 264
+    Width = 77
+    DataField = 'PERMISSAO'
+    DataSource = DM.ds_login
+    ParentColor = False
+    Visible = False
+  end
+  object Label1: TLabel
+    Left = 72
+    Height = 15
+    Top = 264
+    Width = 34
+    Caption = 'Label1'
+    ParentColor = False
+    Visible = False
+  end
+  object lb_name: TLabel
+    Left = 272
+    Height = 33
+    Top = 120
+    Width = 218
+    Caption = 'Nome da Clínica'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clGray
+    Font.Height = -27
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object DBImage1: TDBImage
+    Left = 24
+    Height = 184
+    Top = 40
+    Width = 226
+  end
+  object MainMenu1: TMainMenu
+    left = 472
+    top = 232
+    object MenuItem8: TMenuItem
+      Caption = 'Recepção'
+      Enabled = False
+      object MenuItem9: TMenuItem
+        Caption = 'Agendamento'
+        OnClick = MenuItem9Click
+      end
+      object MenuItem10: TMenuItem
+        Caption = 'Consultas'
+        OnClick = MenuItem10Click
+      end
+      object MenuItem24: TMenuItem
+        Caption = 'Agenda Diária'
+        OnClick = MenuItem24Click
+      end
+    end
+    object MenuItem1: TMenuItem
+      Caption = 'Administrativo'
+      Enabled = False
+      object MenuItem2: TMenuItem
+        Caption = 'Registrar Atendente'
+        OnClick = MenuItem2Click
+      end
+      object MenuItem3: TMenuItem
+        Caption = 'Gerenciar Atendentes'
+        OnClick = MenuItem3Click
+      end
+      object MenuItem4: TMenuItem
+        Caption = 'Registrar Médico'
+        OnClick = MenuItem4Click
+      end
+      object MenuItem5: TMenuItem
+        Caption = 'Gerenciar Médicos'
+        OnClick = MenuItem5Click
+      end
+      object MenuItem34: TMenuItem
+        Caption = 'Convênios'
+        object MenuItem36: TMenuItem
+          Caption = 'Registrar Convênio'
+          OnClick = MenuItem36Click
+        end
+        object MenuItem42: TMenuItem
+          Caption = 'Registrar Planos'
+          OnClick = MenuItem42Click
+        end
+        object MenuItem37: TMenuItem
+          Caption = 'Gerenciar Convênios'
+          OnClick = MenuItem37Click
+        end
+        object MenuItem43: TMenuItem
+          Caption = 'Gerenciar Plano'
+          OnClick = MenuItem43Click
+        end
+        object MenuItem44: TMenuItem
+          Caption = 'Lançamento de Guia'
+          OnClick = MenuItem44Click
+        end
+        object MenuItem35: TMenuItem
+          Caption = 'Entrega de Convênios'
+          OnClick = MenuItem35Click
+        end
+      end
+      object MenuItem39: TMenuItem
+        Caption = 'Empresas'
+        OnClick = MenuItem39Click
+        object MenuItem40: TMenuItem
+          Caption = 'Registrar Empresas'
+          OnClick = MenuItem40Click
+        end
+        object MenuItem41: TMenuItem
+          Caption = 'Gerenciar Empresas'
+          OnClick = MenuItem41Click
+        end
+      end
+    end
+    object mm_paciente: TMenuItem
+      Caption = 'Pacientes'
+      Enabled = False
+      object MenuItem7: TMenuItem
+        Caption = 'Cadastrar Paciente'
+        OnClick = MenuItem7Click
+      end
+      object MenuItem6: TMenuItem
+        Caption = 'Ficha de  Pacientes'
+        OnClick = MenuItem6Click
+      end
+    end
+    object MenuItem11: TMenuItem
+      Caption = 'Médicos'
+      Enabled = False
+      object MenuItem12: TMenuItem
+        Caption = 'Oftalmologista'
+        Enabled = False
+        OnClick = MenuItem12Click
+        object MenuItem17: TMenuItem
+          Caption = 'Atendimento'
+          OnClick = MenuItem17Click
+        end
+        object MenuItem18: TMenuItem
+          Caption = 'Registrar Procedimentos'
+          OnClick = MenuItem18Click
+        end
+      end
+      object MenuItem13: TMenuItem
+        Caption = 'Dentista'
+        Enabled = False
+        object MenuItem25: TMenuItem
+          Caption = 'Atendimento'
+          OnClick = MenuItem25Click
+        end
+        object MenuItem29: TMenuItem
+          Caption = 'Registrar Procedimentos'
+          OnClick = MenuItem29Click
+        end
+      end
+      object MenuItem14: TMenuItem
+        Caption = 'Cardiologista'
+        Enabled = False
+        OnClick = MenuItem14Click
+        object MenuItem47: TMenuItem
+          Caption = 'Atendimento'
+          OnClick = MenuItem47Click
+        end
+        object MenuItem48: TMenuItem
+          Caption = 'Registrar Procedimentos'
+          OnClick = MenuItem48Click
+        end
+      end
+      object MenuItem15: TMenuItem
+        Caption = 'Infectologista'
+        Enabled = False
+        OnClick = MenuItem15Click
+        object MenuItem21: TMenuItem
+          Caption = 'Atendimento'
+          OnClick = MenuItem21Click
+        end
+        object MenuItem45: TMenuItem
+          Caption = 'Registrar Procedimentos'
+          OnClick = MenuItem45Click
+        end
+      end
+      object MenuItem16: TMenuItem
+        Caption = 'Podólogo'
+        Enabled = False
+        object MenuItem20: TMenuItem
+          Caption = 'Atendimento'
+          OnClick = MenuItem20Click
+        end
+        object MenuItem38: TMenuItem
+          Caption = 'Registrar Procedimentos'
+          OnClick = MenuItem38Click
+        end
+      end
+    end
+    object MenuItem23: TMenuItem
+      Caption = 'Financeiro'
+      object MenuItem19: TMenuItem
+        Caption = 'Relatório Financeiro de Atendimento'
+        Enabled = False
+        OnClick = MenuItem19Click
+      end
+      object MenuItem49: TMenuItem
+        Caption = 'Relatório de Atendimento - Médicos'
+        Enabled = False
+        OnClick = MenuItem49Click
+      end
+      object mn_gasto: TMenuItem
+        Caption = 'Resgistrar Gastos'
+        Enabled = False
+        OnClick = mn_gastoClick
+      end
+      object mm_rel: TMenuItem
+        Caption = 'Relatório de Despesas'
+        Enabled = False
+        OnClick = mm_relClick
+      end
+    end
+    object mn_config: TMenuItem
+      Caption = 'Configurações'
+      Enabled = False
+      object mn_nome: TMenuItem
+        Caption = 'Nome da Clinica'
+        OnClick = mn_nomeClick
+      end
+      object mm234: TMenuItem
+        Caption = 'Logo da Clinica'
+        OnClick = mm234Click
+      end
+    end
+    object mm_sair: TMenuItem
+      Caption = 'Sair'
+      OnClick = mm_sairClick
+    end
+  end
+end

@@ -1,0 +1,40 @@
+object t_inicial: Tt_inicial
+  Left = 305
+  Height = 95
+  Top = 176
+  Width = 496
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Inicial'
+  ClientHeight = 95
+  ClientWidth = 496
+  Color = clWindow
+  Position = poScreenCenter
+  LCLVersion = '1.6.4.0'
+  object bar_progress: TProgressBar
+    Left = 32
+    Height = 20
+    Top = 48
+    Width = 432
+    TabOrder = 0
+  end
+  object lb_percent: TLabel
+    Left = 224
+    Height = 25
+    Top = 24
+    Width = 38
+    Caption = '0%'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clGray
+    Font.Height = -21
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Timer1: TTimer
+    Interval = 30
+    OnTimer = Timer1Timer
+  end
+end

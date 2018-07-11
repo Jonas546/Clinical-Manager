@@ -1,0 +1,72 @@
+object t_gerenciar_empresa: Tt_gerenciar_empresa
+  Left = 260
+  Height = 296
+  Top = 120
+  Width = 551
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Gerenciar Empresas'
+  ClientHeight = 296
+  ClientWidth = 551
+  Color = clWindow
+  OnClose = FormClose
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.6.4.0'
+  object DBGrid1: TDBGrid
+    Left = 16
+    Height = 192
+    Top = 88
+    Width = 520
+    Color = clWindow
+    Columns = <>
+    DataSource = DM.ds_empresa
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 16
+    Height = 33
+    Top = 48
+    Width = 521
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 33
+    ClientWidth = 521
+    DataSource = DM.ds_empresa
+    Options = []
+    TabOrder = 1
+    VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbDelete, nbEdit, nbPost, nbCancel, nbRefresh]
+  end
+  object Label1: TLabel
+    Left = 24
+    Height = 18
+    Top = 21
+    Width = 64
+    Caption = 'Empresa'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clGray
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object db_txt_emp: TDBEdit
+    Left = 96
+    Height = 23
+    Top = 16
+    Width = 440
+    DataField = 'EMP'
+    DataSource = DM.ds_empresa
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 2
+  end
+end

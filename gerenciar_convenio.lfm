@@ -1,0 +1,71 @@
+object t_gerenciar_convenio: Tt_gerenciar_convenio
+  Left = 260
+  Height = 271
+  Top = 120
+  Width = 351
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Gerenciar Convênio'
+  ClientHeight = 271
+  ClientWidth = 351
+  Color = clWindow
+  OnClose = FormClose
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.6.4.0'
+  object Label1: TLabel
+    Left = 24
+    Height = 16
+    Top = 24
+    Width = 59
+    Caption = 'Convênio'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clGray
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object db_txt_convenio: TDBEdit
+    Left = 96
+    Height = 23
+    Top = 17
+    Width = 232
+    DataField = 'CONVENIO'
+    DataSource = DM.ds_convenio
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 0
+  end
+  object DBGrid1: TDBGrid
+    Left = 24
+    Height = 168
+    Top = 80
+    Width = 304
+    Color = clWindow
+    Columns = <>
+    DataSource = DM.ds_convenio
+    TabOrder = 1
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 24
+    Height = 25
+    Top = 50
+    Width = 304
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 25
+    ClientWidth = 304
+    DataSource = DM.ds_convenio
+    Options = []
+    TabOrder = 2
+    VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbDelete, nbEdit, nbPost, nbCancel, nbRefresh]
+  end
+end

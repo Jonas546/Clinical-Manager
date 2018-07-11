@@ -1,0 +1,80 @@
+object t_login: Tt_login
+  Left = 360
+  Height = 185
+  Top = 155
+  Width = 359
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Login'
+  ClientHeight = 185
+  ClientWidth = 359
+  Color = clWhite
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.6.4.0'
+  object txt_login: TEdit
+    Left = 96
+    Height = 23
+    Top = 40
+    Width = 232
+    TabOrder = 0
+  end
+  object txt_senha: TEdit
+    Left = 96
+    Height = 23
+    Top = 80
+    Width = 232
+    EchoMode = emPassword
+    PasswordChar = '*'
+    TabOrder = 1
+  end
+  object btn_entrar: TButton
+    Left = 120
+    Height = 25
+    Top = 120
+    Width = 75
+    Caption = 'Entrar'
+    OnClick = btn_entrarClick
+    TabOrder = 2
+  end
+  object btn_sair: TButton
+    Left = 232
+    Height = 25
+    Top = 120
+    Width = 75
+    Caption = 'Sair'
+    OnClick = btn_sairClick
+    TabOrder = 3
+  end
+  object Label1: TLabel
+    Left = 32
+    Height = 19
+    Top = 44
+    Width = 44
+    Caption = 'Login'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clGray
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 32
+    Height = 19
+    Top = 84
+    Width = 50
+    Caption = 'Senha'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clGray
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+end

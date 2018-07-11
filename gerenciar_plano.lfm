@@ -1,0 +1,89 @@
+object t_gerenciar_plano: Tt_gerenciar_plano
+  Left = 260
+  Height = 314
+  Top = 120
+  Width = 510
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Gerenciar Plano'
+  ClientHeight = 314
+  ClientWidth = 510
+  Color = clWindow
+  OnClose = FormClose
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.6.4.0'
+  object DBGrid1: TDBGrid
+    Left = 24
+    Height = 208
+    Top = 88
+    Width = 465
+    Color = clWindow
+    Columns = <>
+    DataSource = DM.ds_plano
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object Label1: TLabel
+    Left = 24
+    Height = 18
+    Top = 21
+    Width = 42
+    Caption = 'Plano'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clGray
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 24
+    Height = 33
+    Top = 48
+    Width = 336
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 33
+    ClientWidth = 336
+    DataSource = DM.ds_plano
+    Options = []
+    TabOrder = 1
+    VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+  end
+  object Button1: TButton
+    Left = 368
+    Height = 33
+    Top = 48
+    Width = 120
+    Caption = 'Editar'
+    OnClick = Button1Click
+    TabOrder = 2
+  end
+  object db_txt_id: TDBEdit
+    Left = 24
+    Height = 23
+    Top = 296
+    Width = 80
+    DataField = 'ID'
+    DataSource = DM.ds_plano
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 3
+    Visible = False
+  end
+  object db_txt_plano: TEdit
+    Left = 80
+    Height = 23
+    Top = 16
+    Width = 408
+    TabOrder = 4
+  end
+end
