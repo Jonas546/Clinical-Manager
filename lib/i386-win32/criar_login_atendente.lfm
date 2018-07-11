@@ -1,0 +1,120 @@
+object login_atendente: Tlogin_atendente
+  Left = 256
+  Height = 190
+  Top = 120
+  Width = 303
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Criar Login Atendente'
+  ClientHeight = 190
+  ClientWidth = 303
+  Color = clWindow
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.6.4.0'
+  object Label1: TLabel
+    Left = 32
+    Height = 18
+    Top = 32
+    Width = 47
+    Caption = 'Nome '
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clGray
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object txt_id: TEdit
+    Left = 8
+    Height = 23
+    Top = 96
+    Width = 24
+    TabOrder = 0
+    Visible = False
+  end
+  object db_cb_nome: TDBLookupComboBox
+    Left = 88
+    Height = 23
+    Top = 27
+    Width = 184
+    DataField = 'NOME'
+    KeyField = 'ID'
+    ListField = 'NOME'
+    ListFieldIndex = 0
+    ListSource = DM.ds_atendentes
+    LookupCache = False
+    OnChange = db_cb_nomeChange
+    TabOrder = 1
+  end
+  object txt_login: TEdit
+    Left = 88
+    Height = 23
+    Top = 64
+    Width = 184
+    TabOrder = 2
+  end
+  object Label2: TLabel
+    Left = 32
+    Height = 18
+    Top = 64
+    Width = 41
+    Caption = 'Login'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clGray
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object txt_senha: TEdit
+    Left = 88
+    Height = 23
+    Top = 96
+    Width = 184
+    EchoMode = emPassword
+    PasswordChar = '*'
+    TabOrder = 3
+  end
+  object Label3: TLabel
+    Left = 32
+    Height = 18
+    Top = 96
+    Width = 46
+    Caption = 'Senha'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clGray
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object btn_registrar: TButton
+    Left = 64
+    Height = 25
+    Top = 136
+    Width = 75
+    Caption = 'Registrar'
+    OnClick = btn_registrarClick
+    TabOrder = 4
+  end
+  object btn_atualizar: TButton
+    Left = 160
+    Height = 25
+    Top = 136
+    Width = 75
+    Caption = 'Atualizar'
+    OnClick = btn_atualizarClick
+    TabOrder = 5
+  end
+end

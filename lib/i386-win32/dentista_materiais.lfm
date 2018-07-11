@@ -1,0 +1,99 @@
+object t_dentista_materiais: Tt_dentista_materiais
+  Left = 260
+  Height = 298
+  Top = 120
+  Width = 543
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Dentista - Materiais'
+  ClientHeight = 298
+  ClientWidth = 543
+  Color = clWindow
+  OnClose = FormClose
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.6.4.0'
+  object DBGrid1: TDBGrid
+    Left = 24
+    Height = 192
+    Top = 88
+    Width = 496
+    Color = clWindow
+    Columns = <>
+    DataSource = DM.ds_material
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 24
+    Height = 33
+    Top = 48
+    Width = 496
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 33
+    ClientWidth = 496
+    DataSource = DM.ds_material
+    Options = []
+    TabOrder = 1
+    VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbDelete, nbEdit, nbPost, nbCancel, nbRefresh]
+  end
+  object Label1: TLabel
+    Left = 24
+    Height = 18
+    Top = 21
+    Width = 63
+    Caption = 'Material'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clGray
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object DBEdit1: TDBEdit
+    Left = 96
+    Height = 23
+    Top = 16
+    Width = 304
+    DataField = 'DESCRICAO'
+    DataSource = DM.ds_material
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 2
+  end
+  object Label2: TLabel
+    Left = 408
+    Height = 18
+    Top = 21
+    Width = 41
+    Caption = 'Qtde.'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clGray
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object DBEdit2: TDBEdit
+    Left = 456
+    Height = 23
+    Top = 16
+    Width = 64
+    DataField = 'QTDE'
+    DataSource = DM.ds_material
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 3
+  end
+end

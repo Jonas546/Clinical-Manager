@@ -1,0 +1,5254 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 489
+  HorizontalOffset = 19
+  VerticalOffset = 126
+  Width = 974
+  object ibSistema: TIBConnection
+    Connected = False
+    LoginPrompt = False
+    DatabaseName = 'CLINICA.FDB'
+    KeepConnection = False
+    Password = 'sbbhkk'
+    Transaction = SQLTransaction1
+    UserName = 'sysdba'
+    Options = []
+    CheckTransactionParams = False
+    left = 32
+    top = 8
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = ibSistema
+    Options = []
+    left = 104
+    top = 8
+  end
+  object qr_login: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'COD'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_FUNC'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'LOGIN'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'SENHA'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'COD_MEDICO'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'PERMISSAO'
+        DataType = ftInteger
+        Precision = -1
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from login;'
+    )
+    Options = []
+    Params = <>
+    UpdateMode = upWhereAll
+    left = 184
+    top = 8
+  end
+  object ds_login: TDataSource
+    DataSet = qr_login
+    left = 248
+    top = 8
+  end
+  object qr_atendente: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'RG'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'CPF'
+        DataType = ftString
+        Precision = -1
+        Size = 14
+      end    
+      item
+        Name = 'TEL'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'CARGO'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'ENDERECO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'BAIRRO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CEP'
+        DataType = ftString
+        Precision = -1
+        Size = 9
+      end    
+      item
+        Name = 'CIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = 'UF'
+        DataType = ftString
+        Precision = -1
+        Size = 2
+      end    
+      item
+        Name = 'DATA_ENTRADA'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'DATA_SAIDA'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'NOME'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from atendente;'
+    )
+    Options = []
+    Params = <>
+    UpdateMode = upWhereAll
+    left = 32
+    top = 66
+  end
+  object qr_r_login: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'COD'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_FUNC'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'LOGIN'
+        DataType = ftString
+        Precision = -1
+        Size = 15
+      end    
+      item
+        Name = 'SENHA'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'COD_MEDICO'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'PERMISSAO'
+        DataType = ftInteger
+        Precision = -1
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from login;'
+    )
+    Options = []
+    Params = <>
+    UpdateMode = upWhereAll
+    left = 312
+    top = 8
+  end
+  object Label1: TLabel
+    Left = 0
+    Height = 17
+    Top = 0
+    Width = 65
+    Caption = 'Label1'
+    ParentColor = False
+  end
+  object ds_atendente: TDataSource
+    DataSet = qr_atendente
+    left = 104
+    top = 66
+  end
+  object query_atendente: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'RG'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'CPF'
+        DataType = ftString
+        Precision = -1
+        Size = 14
+      end    
+      item
+        Name = 'TEL'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'CARGO'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'ENDERECO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'BAIRRO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CEP'
+        DataType = ftString
+        Precision = -1
+        Size = 9
+      end    
+      item
+        Name = 'CIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = 'UF'
+        DataType = ftString
+        Precision = -1
+        Size = 2
+      end    
+      item
+        Name = 'DATA_ENTRADA'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'DATA_SAIDA'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'NOME'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'EMAIL'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end>
+    AfterDelete = query_atendenteAfterDelete
+    AfterPost = query_atendenteAfterPost
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from atendente where data_saida is null;'
+    )
+    Options = []
+    Params = <>
+    UpdateMode = upWhereAll
+    left = 192
+    top = 66
+  end
+  object ds_atendentes: TDataSource
+    DataSet = query_atendente
+    left = 280
+    top = 66
+  end
+  object qr_v_login: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'COD'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_FUNC'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'LOGIN'
+        DataType = ftString
+        Precision = -1
+        Size = 15
+      end    
+      item
+        Name = 'SENHA'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'COD_MEDICO'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'PERMISSAO'
+        DataType = ftInteger
+        Precision = -1
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from login;'
+    )
+    Options = []
+    Params = <>
+    left = 376
+    top = 8
+  end
+  object qr_medico: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'NOME'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'RG'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'CPF'
+        DataType = ftString
+        Precision = -1
+        Size = 14
+      end    
+      item
+        Name = 'TEL'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'ESPECIALIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CRM'
+        DataType = ftString
+        Precision = -1
+        Size = 13
+      end    
+      item
+        Name = 'EMAIL'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'ENDERECO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'CEP'
+        DataType = ftString
+        Precision = -1
+        Size = 9
+      end    
+      item
+        Name = 'BAIRRO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'UF'
+        DataType = ftString
+        Precision = -1
+        Size = 2
+      end    
+      item
+        Name = 'DATA_ENTRADA'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'DATA_SAIDA'
+        DataType = ftDate
+        Precision = -1
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from medico;'
+    )
+    Options = []
+    Params = <>
+    UpdateMode = upWhereAll
+    left = 352
+    top = 64
+  end
+  object ds_medico: TDataSource
+    DataSet = query_medico
+    left = 424
+    top = 64
+  end
+  object query_medico: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'NOME'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'RG'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'CPF'
+        DataType = ftString
+        Precision = -1
+        Size = 14
+      end    
+      item
+        Name = 'TEL'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'ESPECIALIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CRM'
+        DataType = ftString
+        Precision = -1
+        Size = 13
+      end    
+      item
+        Name = 'EMAIL'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'ENDERECO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'CEP'
+        DataType = ftString
+        Precision = -1
+        Size = 9
+      end    
+      item
+        Name = 'BAIRRO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'UF'
+        DataType = ftString
+        Precision = -1
+        Size = 2
+      end    
+      item
+        Name = 'DATA_ENTRADA'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'DATA_SAIDA'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'HORA_ENTRADA'
+        DataType = ftString
+        Precision = -1
+        Size = 5
+      end    
+      item
+        Name = 'HORA_SAIDA'
+        DataType = ftString
+        Precision = -1
+        Size = 5
+      end>
+    AfterDelete = query_medicoAfterDelete
+    AfterPost = query_medicoAfterPost
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from medico;'
+    )
+    Options = []
+    Params = <>
+    UpdateMode = upWhereAll
+    left = 448
+    top = 8
+  end
+  object qr_medico_ativo: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'NOME'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'RG'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'CPF'
+        DataType = ftString
+        Precision = -1
+        Size = 14
+      end    
+      item
+        Name = 'TEL'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'ESPECIALIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CRM'
+        DataType = ftString
+        Precision = -1
+        Size = 13
+      end    
+      item
+        Name = 'EMAIL'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'ENDERECO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'CEP'
+        DataType = ftString
+        Precision = -1
+        Size = 9
+      end    
+      item
+        Name = 'BAIRRO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'UF'
+        DataType = ftString
+        Precision = -1
+        Size = 2
+      end    
+      item
+        Name = 'DATA_ENTRADA'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'DATA_SAIDA'
+        DataType = ftDate
+        Precision = -1
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from medico where data_saida is null;'
+    )
+    Options = []
+    Params = <>
+    UpdateMode = upWhereAll
+    left = 32
+    top = 136
+  end
+  object ds_medico_ativo: TDataSource
+    DataSet = qr_medico_ativo
+    left = 120
+    top = 136
+  end
+  object qr_paciente: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'NOME'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'RG'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'CPF'
+        DataType = ftString
+        Precision = -1
+        Size = 14
+      end    
+      item
+        Name = 'TEL'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'EMAIL'
+        DataType = ftString
+        Precision = -1
+        Size = 40
+      end    
+      item
+        Name = 'ENDERECO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'CEP'
+        DataType = ftString
+        Precision = -1
+        Size = 9
+      end    
+      item
+        Name = 'BAIRRO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'UF'
+        DataType = ftString
+        Precision = -1
+        Size = 2
+      end    
+      item
+        Name = 'DATA_NASCIMENTO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'CONVENIO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'DATA_REGISTRO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'EMISSOR'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'DATA_EMISSAO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'SEXO'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'CEL'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'LOCAL_NASCIMENTO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'PROFISSAO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'TRABALHO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'TIPO_CARTEIRA'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'VALIDADE'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'TITULAR'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'RESPONSAVEL'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CPF_RESPONSAVEL'
+        DataType = ftString
+        Precision = -1
+        Size = 14
+      end    
+      item
+        Name = 'ESTADO_CIVIL'
+        DataType = ftString
+        Precision = -1
+        Size = 15
+      end    
+      item
+        Name = 'PLANO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from paciente;'
+    )
+    Options = []
+    Params = <>
+    UpdateMode = upWhereAll
+    left = 208
+    top = 136
+  end
+  object query_paciente: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'NOME'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'RG'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'CPF'
+        DataType = ftString
+        Precision = -1
+        Size = 14
+      end    
+      item
+        Name = 'TEL'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'EMAIL'
+        DataType = ftString
+        Precision = -1
+        Size = 40
+      end    
+      item
+        Name = 'ENDERECO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'CEP'
+        DataType = ftString
+        Precision = -1
+        Size = 9
+      end    
+      item
+        Name = 'BAIRRO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'UF'
+        DataType = ftString
+        Precision = -1
+        Size = 2
+      end    
+      item
+        Name = 'DATA_NASCIMENTO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'CONVENIO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'DATA_REGISTRO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'EMISSOR'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'DATA_EMISSAO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'SEXO'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'CEL'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'LOCAL_NASCIMENTO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'PROFISSAO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'TRABALHO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'TIPO_CARTEIRA'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'VALIDADE'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'TITULAR'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'RESPONSAVEL'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CPF_RESPONSAVEL'
+        DataType = ftString
+        Precision = -1
+        Size = 14
+      end    
+      item
+        Name = 'ESTADO_CIVIL'
+        DataType = ftString
+        Precision = -1
+        Size = 15
+      end    
+      item
+        Name = 'PLANO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end>
+    AfterDelete = query_pacienteAfterDelete
+    AfterPost = query_pacienteAfterPost
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from paciente;'
+    )
+    Options = []
+    Params = <>
+    UpdateMode = upWhereAll
+    left = 280
+    top = 136
+  end
+  object ds_paciente: TDataSource
+    DataSet = query_paciente
+    left = 360
+    top = 136
+  end
+  object q_medico: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'NOME'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'RG'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'CPF'
+        DataType = ftString
+        Precision = -1
+        Size = 14
+      end    
+      item
+        Name = 'TEL'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'ESPECIALIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CRM'
+        DataType = ftString
+        Precision = -1
+        Size = 13
+      end    
+      item
+        Name = 'EMAIL'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'ENDERECO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'CEP'
+        DataType = ftString
+        Precision = -1
+        Size = 9
+      end    
+      item
+        Name = 'BAIRRO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'UF'
+        DataType = ftString
+        Precision = -1
+        Size = 2
+      end    
+      item
+        Name = 'DATA_ENTRADA'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'DATA_SAIDA'
+        DataType = ftDate
+        Precision = -1
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from medico;'
+    )
+    Options = []
+    Params = <>
+    left = 424
+    top = 136
+  end
+  object qr_consulta: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'GUIA'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_PACIENTE'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_MEDICO'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'ESPECIALIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = 'DATA_CONSULTA'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'HORA'
+        DataType = ftString
+        Precision = -1
+        Size = 5
+      end    
+      item
+        Name = 'CONFIRMAR'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'COMPARECEU'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'VALOR'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'FORMA_PAGAMENTO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CARTAO_CREDITO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'ATENDENTE'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'STATUS'
+        DataType = ftString
+        Precision = -1
+        Size = 15
+      end    
+      item
+        Name = 'VALOR_TOTAL'
+        DataType = ftBCD
+        Precision = 9
+        Size = 2
+      end    
+      item
+        Name = 'TIPO_CONSULTA'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'PARCELAS'
+        DataType = ftInteger
+        Precision = -1
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from consulta;'
+    )
+    Options = []
+    Params = <>
+    left = 880
+    top = 64
+  end
+  object qr_verifica_consulta: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'GUIA'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_PACIENTE'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_MEDICO'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'ESPECIALIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = 'DATA_CONSULTA'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'HORA'
+        DataType = ftString
+        Precision = -1
+        Size = 5
+      end    
+      item
+        Name = 'CONFIRMAR'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'COMPARECEU'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'VALOR'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'FORMA_PAGAMENTO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CARTAO_CREDITO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'ATENDENTE'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'STATUS'
+        DataType = ftString
+        Precision = -1
+        Size = 15
+      end    
+      item
+        Name = 'VALOR_TOTAL'
+        DataType = ftBCD
+        Precision = 9
+        Size = 2
+      end    
+      item
+        Name = 'TIPO_CONSULTA'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'PARCELAS'
+        DataType = ftInteger
+        Precision = -1
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from consulta;'
+    )
+    Options = []
+    Params = <>
+    left = 968
+    top = 72
+  end
+  object qr_verifica_atendente: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'NOME'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select a.nome from atendente as a, login as l where l.cod_func = a.id;'
+    )
+    Options = []
+    Params = <>
+    left = 576
+    top = 112
+  end
+  object ds_agenda_medica: TDataSource
+    Enabled = False
+    left = 728
+    top = 112
+  end
+  object query_consultas: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'GUIA'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_PACIENTE'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_MEDICO'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'ESPECIALIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = 'DATA_CONSULTA'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'HORA'
+        DataType = ftString
+        Precision = -1
+        Size = 5
+      end    
+      item
+        Name = 'CONFIRMAR'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'COMPARECEU'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'VALOR'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'FORMA_PAGAMENTO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CARTAO_CREDITO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'ATENDENTE'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'STATUS'
+        DataType = ftString
+        Precision = -1
+        Size = 15
+      end    
+      item
+        Name = 'VALOR_TOTAL'
+        DataType = ftBCD
+        Precision = 9
+        Size = 2
+      end    
+      item
+        Name = 'TIPO_CONSULTA'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'PARCELAS'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'NOME'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'RG'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'CPF'
+        DataType = ftString
+        Precision = -1
+        Size = 14
+      end    
+      item
+        Name = 'CONVENIO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'VALIDADE'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'TEL'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'CEL'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'EMAIL'
+        DataType = ftString
+        Precision = -1
+        Size = 40
+      end    
+      item
+        Name = 'PLANO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'NOME_1'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'CRM'
+        DataType = ftString
+        Precision = -1
+        Size = 13
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select c.*,'
+      'p.nome, p.rg, p.cpf, p.convenio, p.validade, p.tel, p.cel, p.email, p.plano,'
+      'm.nome, m.crm'
+      'from consulta as c,'
+      'medico as m,'
+      'paciente as p'
+      'where c.cod_medico = m.id'
+      'and'
+      'c.cod_paciente = p.id'
+      'and'
+      'c.status = ''Aberto'''
+      'order by c.guia asc;'
+    )
+    Options = []
+    Params = <>
+    left = 928
+    top = 136
+  end
+  object ds_consultas: TDataSource
+    DataSet = query_consultas
+    left = 992
+    top = 120
+  end
+  object query_podologo: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'GUIA'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_PACIENTE'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_MEDICO'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'ESPECIALIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = 'DATA_CONSULTA'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'HORA'
+        DataType = ftString
+        Precision = -1
+        Size = 5
+      end    
+      item
+        Name = 'CONFIRMAR'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'COMPARECEU'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'VALOR'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'FORMA_PAGAMENTO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CARTAO_CREDITO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'ATENDENTE'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'STATUS'
+        DataType = ftString
+        Precision = -1
+        Size = 15
+      end    
+      item
+        Name = 'VALOR_TOTAL'
+        DataType = ftBCD
+        Precision = 9
+        Size = 2
+      end    
+      item
+        Name = 'TIPO_CONSULTA'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'PARCELAS'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'PREFERENCIA'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'DATA_ENTREGA'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'DATA_ENVIO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'NOME'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'RG'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'CPF'
+        DataType = ftString
+        Precision = -1
+        Size = 14
+      end    
+      item
+        Name = 'TEL'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'EMAIL'
+        DataType = ftString
+        Precision = -1
+        Size = 40
+      end    
+      item
+        Name = 'ENDERECO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'CEP'
+        DataType = ftString
+        Precision = -1
+        Size = 9
+      end    
+      item
+        Name = 'BAIRRO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'UF'
+        DataType = ftString
+        Precision = -1
+        Size = 2
+      end    
+      item
+        Name = 'DATA_NASCIMENTO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'CONVENIO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'DATA_REGISTRO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'EMISSOR'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'DATA_EMISSAO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'SEXO'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'CEL'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'LOCAL_NASCIMENTO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'PROFISSAO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'TRABALHO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'TIPO_CARTEIRA'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'VALIDADE'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'TITULAR'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'RESPONSAVEL'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CPF_RESPONSAVEL'
+        DataType = ftString
+        Precision = -1
+        Size = 14
+      end    
+      item
+        Name = 'ESTADO_CIVIL'
+        DataType = ftString
+        Precision = -1
+        Size = 15
+      end    
+      item
+        Name = 'PLANO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select c.*, p.* from consulta as c,'
+      'paciente as p'
+      'where c.especialidade = ''Podólogo'''
+      'and'
+      'c.confirmar = ''S'''
+      'and'
+      'c.status = ''Aberto'''
+      'and'
+      'c.cod_paciente = p.id'
+      'and'
+      'c.cod_medico = :v1'
+      'and'
+      'c.guia = :v2;'
+    )
+    Options = []
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'v1'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'v2'
+        ParamType = ptInput
+      end>
+    left = 32
+    top = 192
+  end
+  object ds_podologo: TDataSource
+    DataSet = query_podologo
+    left = 112
+    top = 192
+  end
+  object qr_verifica_medico: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'NOME'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select m.nome, m.id from medico as m, login as l where l.cod_medico = m.id;'
+    )
+    Options = []
+    Params = <>
+    left = 544
+    top = 8
+  end
+  object qry_consulta: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'GUIA'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_PACIENTE'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_MEDICO'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'ESPECIALIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = 'DATA_CONSULTA'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'HORA'
+        DataType = ftString
+        Precision = -1
+        Size = 5
+      end    
+      item
+        Name = 'CONFIRMAR'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'COMPARECEU'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'VALOR'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'FORMA_PAGAMENTO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CARTAO_CREDITO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'ATENDENTE'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'STATUS'
+        DataType = ftString
+        Precision = -1
+        Size = 15
+      end    
+      item
+        Name = 'VALOR_TOTAL'
+        DataType = ftBCD
+        Precision = 9
+        Size = 2
+      end    
+      item
+        Name = 'TIPO_CONSULTA'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'PARCELAS'
+        DataType = ftInteger
+        Precision = -1
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from consulta;'
+    )
+    Options = []
+    Params = <>
+    left = 496
+    top = 64
+  end
+  object qr_procedimentos: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'COD'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'ESPECIALIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'COD_MEDICO'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'PROCEDIMENTO'
+        DataType = ftString
+        Precision = -1
+        Size = 1000
+      end    
+      item
+        Name = 'COD_PACIENTE'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_GUIA'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'TIPO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from procedimentos;'
+    )
+    Options = []
+    Params = <>
+    left = 584
+    top = 64
+  end
+  object qry1_consulta: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'GUIA'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_PACIENTE'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_MEDICO'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'ESPECIALIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = 'DATA_CONSULTA'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'HORA'
+        DataType = ftString
+        Precision = -1
+        Size = 5
+      end    
+      item
+        Name = 'CONFIRMAR'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'COMPARECEU'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'VALOR'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'FORMA_PAGAMENTO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CARTAO_CREDITO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'ATENDENTE'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'STATUS'
+        DataType = ftString
+        Precision = -1
+        Size = 15
+      end    
+      item
+        Name = 'VALOR_TOTAL'
+        DataType = ftBCD
+        Precision = 9
+        Size = 2
+      end    
+      item
+        Name = 'TIPO_CONSULTA'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from consulta;'
+    )
+    Options = []
+    Params = <>
+    left = 496
+    top = 136
+  end
+  object query_infectologista: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'GUIA'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_PACIENTE'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_MEDICO'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'ESPECIALIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = 'DATA_CONSULTA'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'HORA'
+        DataType = ftString
+        Precision = -1
+        Size = 5
+      end    
+      item
+        Name = 'CONFIRMAR'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'COMPARECEU'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'VALOR'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'FORMA_PAGAMENTO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CARTAO_CREDITO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'ATENDENTE'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'STATUS'
+        DataType = ftString
+        Precision = -1
+        Size = 15
+      end    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'NOME'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'RG'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'CPF'
+        DataType = ftString
+        Precision = -1
+        Size = 14
+      end    
+      item
+        Name = 'TEL'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'EMAIL'
+        DataType = ftString
+        Precision = -1
+        Size = 40
+      end    
+      item
+        Name = 'ENDERECO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'CEP'
+        DataType = ftString
+        Precision = -1
+        Size = 9
+      end    
+      item
+        Name = 'BAIRRO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'UF'
+        DataType = ftString
+        Precision = -1
+        Size = 2
+      end    
+      item
+        Name = 'DATA_NASCIMENTO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'CONVENIO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'DATA_REGISTRO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'EMISSOR'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'DATA_EMISSAO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'SEXO'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'CEL'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'LOCAL_NASCIMENTO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'PROFISSAO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'TRABALHO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'TIPO_CARTEIRA'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'VALIDADE'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'TITULAR'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'RESPONSAVEL'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CPF_RESPONSAVEL'
+        DataType = ftString
+        Precision = -1
+        Size = 14
+      end    
+      item
+        Name = 'ESTADO_CIVIL'
+        DataType = ftString
+        Precision = -1
+        Size = 15
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select c.*, p.* from consulta as c,'
+      'paciente as p'
+      'where c.especialidade = ''Infectologista'''
+      'and'
+      'c.compareceu = ''S'''
+      'and'
+      'c.confirmar = ''S'''
+      'and'
+      'c.status = ''Aberto'''
+      'and'
+      'c.cod_paciente = p.id'
+      'and'
+      'c.cod_medico = :v1'
+      'and'
+      'c.guia = :v2;'
+    )
+    Options = []
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'v1'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'v2'
+        ParamType = ptInput
+      end>
+    left = 176
+    top = 208
+  end
+  object ds_infectologista: TDataSource
+    DataSet = query_infectologista
+    left = 240
+    top = 192
+  end
+  object query_cardiologista: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'GUIA'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_PACIENTE'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_MEDICO'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'ESPECIALIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = 'DATA_CONSULTA'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'HORA'
+        DataType = ftString
+        Precision = -1
+        Size = 5
+      end    
+      item
+        Name = 'CONFIRMAR'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'COMPARECEU'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'VALOR'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'FORMA_PAGAMENTO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CARTAO_CREDITO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'ATENDENTE'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'STATUS'
+        DataType = ftString
+        Precision = -1
+        Size = 15
+      end    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'NOME'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'RG'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'CPF'
+        DataType = ftString
+        Precision = -1
+        Size = 14
+      end    
+      item
+        Name = 'TEL'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'EMAIL'
+        DataType = ftString
+        Precision = -1
+        Size = 40
+      end    
+      item
+        Name = 'ENDERECO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'CEP'
+        DataType = ftString
+        Precision = -1
+        Size = 9
+      end    
+      item
+        Name = 'BAIRRO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'UF'
+        DataType = ftString
+        Precision = -1
+        Size = 2
+      end    
+      item
+        Name = 'DATA_NASCIMENTO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'CONVENIO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'DATA_REGISTRO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'EMISSOR'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'DATA_EMISSAO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'SEXO'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'CEL'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'LOCAL_NASCIMENTO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'PROFISSAO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'TRABALHO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'TIPO_CARTEIRA'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'VALIDADE'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'TITULAR'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'RESPONSAVEL'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CPF_RESPONSAVEL'
+        DataType = ftString
+        Precision = -1
+        Size = 14
+      end    
+      item
+        Name = 'ESTADO_CIVIL'
+        DataType = ftString
+        Precision = -1
+        Size = 15
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select c.*, p.* from consulta as c,'
+      'paciente as p'
+      'where c.especialidade = ''Cardiologista'''
+      'and'
+      'c.compareceu = ''S'''
+      'and'
+      'c.confirmar = ''S'''
+      'and'
+      'c.status = ''Aberto'''
+      'and'
+      'c.cod_paciente = p.id'
+      'and'
+      'c.cod_medico = :v1'
+      'and'
+      'c.guia = :v2;'
+    )
+    Options = []
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'v1'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'v2'
+        ParamType = ptInput
+      end>
+    left = 800
+    top = 128
+  end
+  object ds_cardiologista: TDataSource
+    DataSet = query_cardiologista
+    left = 864
+    top = 112
+  end
+  object qr_historico_paciente: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'NOME'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'RG'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'CPF'
+        DataType = ftString
+        Precision = -1
+        Size = 14
+      end    
+      item
+        Name = 'TEL'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'EMAIL'
+        DataType = ftString
+        Precision = -1
+        Size = 40
+      end    
+      item
+        Name = 'ENDERECO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'CEP'
+        DataType = ftString
+        Precision = -1
+        Size = 9
+      end    
+      item
+        Name = 'BAIRRO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'UF'
+        DataType = ftString
+        Precision = -1
+        Size = 2
+      end    
+      item
+        Name = 'DATA_NASCIMENTO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'CONVENIO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'DATA_REGISTRO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'EMISSOR'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'DATA_EMISSAO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'SEXO'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'CEL'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'LOCAL_NASCIMENTO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'PROFISSAO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'TRABALHO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'TIPO_CARTEIRA'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'VALIDADE'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'TITULAR'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'RESPONSAVEL'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CPF_RESPONSAVEL'
+        DataType = ftString
+        Precision = -1
+        Size = 14
+      end    
+      item
+        Name = 'ESTADO_CIVIL'
+        DataType = ftString
+        Precision = -1
+        Size = 15
+      end    
+      item
+        Name = 'PLANO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'GUIA'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'DATA_CONSULTA'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'HORA'
+        DataType = ftString
+        Precision = -1
+        Size = 5
+      end    
+      item
+        Name = 'VALOR'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'VALOR_TOTAL'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'FORMA_PAGAMENTO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'ATENDENTE'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'TIPO_CONSULTA'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'PARCELAS'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'NOME_1'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'ESPECIALIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select p.*,'
+      'c.guia, c.data_consulta, c.hora, c.valor, cast(c.valor_total as varchar(10)) as "VALOR_TOTAL",'
+      'c.forma_pagamento, c.atendente, c.tipo_consulta, c.parcelas,'
+      'm.nome, m.especialidade'
+      'from'
+      'paciente as p,'
+      'consulta as c,'
+      'medico as m'
+      'where'
+      'p.id = c.cod_paciente'
+      'and'
+      'm.id = c.cod_medico'
+      'and'
+      'p.nome = :v1;'
+      ''
+    )
+    Options = []
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'v1'
+        ParamType = ptInput
+      end>
+    left = 656
+    top = 8
+  end
+  object ds_historico_paciente: TDataSource
+    DataSet = qr_historico_paciente
+    left = 776
+    top = 8
+  end
+  object qr_agenda_diaria: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'GUIA'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_PACIENTE'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_MEDICO'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'ESPECIALIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = 'DATA_CONSULTA'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'HORA'
+        DataType = ftString
+        Precision = -1
+        Size = 5
+      end    
+      item
+        Name = 'CONFIRMAR'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'COMPARECEU'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'VALOR'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'FORMA_PAGAMENTO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CARTAO_CREDITO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'ATENDENTE'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'STATUS'
+        DataType = ftString
+        Precision = -1
+        Size = 15
+      end    
+      item
+        Name = 'VALOR_TOTAL'
+        DataType = ftBCD
+        Precision = 9
+        Size = 2
+      end    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'NOME'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'RG'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'CPF'
+        DataType = ftString
+        Precision = -1
+        Size = 14
+      end    
+      item
+        Name = 'TEL'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'EMAIL'
+        DataType = ftString
+        Precision = -1
+        Size = 40
+      end    
+      item
+        Name = 'ENDERECO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'CEP'
+        DataType = ftString
+        Precision = -1
+        Size = 9
+      end    
+      item
+        Name = 'BAIRRO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'UF'
+        DataType = ftString
+        Precision = -1
+        Size = 2
+      end    
+      item
+        Name = 'DATA_NASCIMENTO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'CONVENIO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'DATA_REGISTRO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'EMISSOR'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'DATA_EMISSAO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'SEXO'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'CEL'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'LOCAL_NASCIMENTO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'PROFISSAO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'TRABALHO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'TIPO_CARTEIRA'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'VALIDADE'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'TITULAR'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'RESPONSAVEL'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CPF_RESPONSAVEL'
+        DataType = ftString
+        Precision = -1
+        Size = 14
+      end    
+      item
+        Name = 'ESTADO_CIVIL'
+        DataType = ftString
+        Precision = -1
+        Size = 15
+      end    
+      item
+        Name = 'MEDICO'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select c.*, p.*, m.nome as "MEDICO"'
+      'from'
+      'consulta as c,'
+      'paciente as p,'
+      'medico as m'
+      'where c.status = ''Aberto'''
+      'and'
+      'c.data_consulta = cast(:v1 as date)'
+      'and'
+      'c.confirmar = ''S'''
+      'and'
+      'p.id = c.cod_paciente'
+      'and'
+      'c.cod_medico = m.id;'
+      ''
+    )
+    Options = []
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'v1'
+        ParamType = ptInput
+      end>
+    left = 880
+    top = 8
+  end
+  object ds_agenda_diaria: TDataSource
+    DataSet = qr_agenda_diaria
+    left = 944
+    top = 24
+  end
+  object query_oftalmo: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'GUIA'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_PACIENTE'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_MEDICO'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'ESPECIALIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = 'DATA_CONSULTA'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'HORA'
+        DataType = ftString
+        Precision = -1
+        Size = 5
+      end    
+      item
+        Name = 'CONFIRMAR'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'COMPARECEU'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'VALOR'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'FORMA_PAGAMENTO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CARTAO_CREDITO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'ATENDENTE'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'STATUS'
+        DataType = ftString
+        Precision = -1
+        Size = 15
+      end    
+      item
+        Name = 'VALOR_TOTAL'
+        DataType = ftBCD
+        Precision = 9
+        Size = 2
+      end    
+      item
+        Name = 'TIPO_CONSULTA'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'PARCELAS'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'PREFERENCIA'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'DATA_ENTREGA'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'DATA_ENVIO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'NOME'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'RG'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'CPF'
+        DataType = ftString
+        Precision = -1
+        Size = 14
+      end    
+      item
+        Name = 'TEL'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'EMAIL'
+        DataType = ftString
+        Precision = -1
+        Size = 40
+      end    
+      item
+        Name = 'ENDERECO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'CEP'
+        DataType = ftString
+        Precision = -1
+        Size = 9
+      end    
+      item
+        Name = 'BAIRRO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'UF'
+        DataType = ftString
+        Precision = -1
+        Size = 2
+      end    
+      item
+        Name = 'DATA_NASCIMENTO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'CONVENIO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'DATA_REGISTRO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'EMISSOR'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'DATA_EMISSAO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'SEXO'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'CEL'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'LOCAL_NASCIMENTO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'PROFISSAO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'TRABALHO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'TIPO_CARTEIRA'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'VALIDADE'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'TITULAR'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'RESPONSAVEL'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CPF_RESPONSAVEL'
+        DataType = ftString
+        Precision = -1
+        Size = 14
+      end    
+      item
+        Name = 'ESTADO_CIVIL'
+        DataType = ftString
+        Precision = -1
+        Size = 15
+      end    
+      item
+        Name = 'PLANO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select c.*, p.* from consulta as c,'
+      'paciente as p'
+      'where c.especialidade = ''Oftalmologista'''
+      'and'
+      'c.compareceu = ''S'''
+      'and'
+      'c.confirmar = ''S'''
+      'and'
+      'c.status = ''Aberto'''
+      'and'
+      'c.cod_paciente = p.id'
+      'and'
+      'c.cod_medico = :v1'
+      'and'
+      'c.guia = :v2;'
+    )
+    Options = []
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'v1'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'v2'
+        ParamType = ptInput
+      end>
+    left = 304
+    top = 208
+  end
+  object ds_oftalmo: TDataSource
+    DataSet = query_oftalmo
+    left = 360
+    top = 184
+  end
+  object query_dentista: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'GUIA'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_PACIENTE'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_MEDICO'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'ESPECIALIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = 'DATA_CONSULTA'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'HORA'
+        DataType = ftString
+        Precision = -1
+        Size = 5
+      end    
+      item
+        Name = 'CONFIRMAR'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'COMPARECEU'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'VALOR'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'FORMA_PAGAMENTO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CARTAO_CREDITO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'ATENDENTE'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'STATUS'
+        DataType = ftString
+        Precision = -1
+        Size = 15
+      end    
+      item
+        Name = 'VALOR_TOTAL'
+        DataType = ftBCD
+        Precision = 9
+        Size = 2
+      end    
+      item
+        Name = 'TIPO_CONSULTA'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'PARCELAS'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'NOME'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'RG'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'CPF'
+        DataType = ftString
+        Precision = -1
+        Size = 14
+      end    
+      item
+        Name = 'TEL'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'EMAIL'
+        DataType = ftString
+        Precision = -1
+        Size = 40
+      end    
+      item
+        Name = 'ENDERECO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'CEP'
+        DataType = ftString
+        Precision = -1
+        Size = 9
+      end    
+      item
+        Name = 'BAIRRO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'UF'
+        DataType = ftString
+        Precision = -1
+        Size = 2
+      end    
+      item
+        Name = 'DATA_NASCIMENTO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'CONVENIO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'DATA_REGISTRO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'EMISSOR'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'DATA_EMISSAO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'SEXO'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'CEL'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'LOCAL_NASCIMENTO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'PROFISSAO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'TRABALHO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'TIPO_CARTEIRA'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'VALIDADE'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'TITULAR'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'RESPONSAVEL'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CPF_RESPONSAVEL'
+        DataType = ftString
+        Precision = -1
+        Size = 14
+      end    
+      item
+        Name = 'ESTADO_CIVIL'
+        DataType = ftString
+        Precision = -1
+        Size = 15
+      end    
+      item
+        Name = 'PLANO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select c.*, p.* from consulta as c,'
+      'paciente as p'
+      'where c.especialidade = ''Dentista'''
+      'and'
+      'c.compareceu = ''S'''
+      'and'
+      'c.confirmar = ''S'''
+      'and'
+      'c.status = ''Aberto'''
+      'and'
+      'c.cod_paciente = p.id'
+      'and'
+      'c.cod_medico = :v1'
+      'and'
+      'c.guia = :v2;'
+    )
+    Options = []
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'v1'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'v2'
+        ParamType = ptInput
+      end>
+    left = 416
+    top = 208
+  end
+  object ds_dentista: TDataSource
+    DataSet = query_dentista
+    left = 472
+    top = 184
+  end
+  object qry_agenda_medica: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'DATA_CONSULTA'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'HORA'
+        DataType = ftString
+        Precision = -1
+        Size = 5
+      end    
+      item
+        Name = 'COD_MEDICO'
+        DataType = ftInteger
+        Precision = -1
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select data_consulta, hora, cod_medico'
+      'from'
+      'consulta'
+      'where'
+      'cod_medico = :v1'
+      'and'
+      'data_consulta = cast(:v2 as date)'
+      'and'
+      'hora = :v3;'
+    )
+    Options = []
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'v1'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'v2'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'v3'
+        ParamType = ptInput
+      end>
+    left = 656
+    top = 128
+  end
+  object qr_agenda_medico: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'GUIA'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_PACIENTE'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_MEDICO'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'ESPECIALIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = 'DATA_CONSULTA'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'HORA'
+        DataType = ftString
+        Precision = -1
+        Size = 5
+      end    
+      item
+        Name = 'CONFIRMAR'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'COMPARECEU'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'VALOR'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'FORMA_PAGAMENTO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CARTAO_CREDITO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'ATENDENTE'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'STATUS'
+        DataType = ftString
+        Precision = -1
+        Size = 15
+      end    
+      item
+        Name = 'VALOR_TOTAL'
+        DataType = ftBCD
+        Precision = 9
+        Size = 2
+      end    
+      item
+        Name = 'TIPO_CONSULTA'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'PARCELAS'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'NOME'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'RG'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'CPF'
+        DataType = ftString
+        Precision = -1
+        Size = 14
+      end    
+      item
+        Name = 'TEL'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'EMAIL'
+        DataType = ftString
+        Precision = -1
+        Size = 40
+      end    
+      item
+        Name = 'ENDERECO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'CEP'
+        DataType = ftString
+        Precision = -1
+        Size = 9
+      end    
+      item
+        Name = 'BAIRRO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'UF'
+        DataType = ftString
+        Precision = -1
+        Size = 2
+      end    
+      item
+        Name = 'DATA_NASCIMENTO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'CONVENIO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'DATA_REGISTRO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'EMISSOR'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'DATA_EMISSAO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'SEXO'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'CEL'
+        DataType = ftString
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'LOCAL_NASCIMENTO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'PROFISSAO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'TRABALHO'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'TIPO_CARTEIRA'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'VALIDADE'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'TITULAR'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'RESPONSAVEL'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CPF_RESPONSAVEL'
+        DataType = ftString
+        Precision = -1
+        Size = 14
+      end    
+      item
+        Name = 'ESTADO_CIVIL'
+        DataType = ftString
+        Precision = -1
+        Size = 15
+      end    
+      item
+        Name = 'PLANO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'ID_1'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'MEDICO'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select c.*, p.*, m.id, m.nome as "MEDICO" from'
+      'paciente as p,'
+      'consulta as c,'
+      'medico as m'
+      'where'
+      'p.id = c.cod_paciente'
+      'and'
+      'm.id = c.cod_medico'
+      'and'
+      'c.cod_medico = :v1'
+      'and'
+      'c.status = ''Aberto'''
+      'and'
+      'c.confirmar = ''S'''
+      'and'
+      'c.data_consulta = cast(:v2 as Date);'
+      ''
+    )
+    Options = []
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'v1'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'v2'
+        ParamType = ptInput
+      end>
+    left = 688
+    top = 64
+  end
+  object ds_agenda_medico: TDataSource
+    DataSet = qr_agenda_medico
+    left = 792
+    top = 64
+  end
+  object qr_dentista_proc: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'DESCRICAO'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'PRECO'
+        DataType = ftBCD
+        Precision = 9
+        Size = 2
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from dentista_procedimento;'
+    )
+    Options = []
+    Params = <>
+    left = 552
+    top = 168
+  end
+  object query_dentista_proc: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'PROC'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'ESPECIALIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'VALOR'
+        DataType = ftBCD
+        Precision = 9
+        Size = 2
+      end>
+    AfterDelete = query_dentista_procAfterDelete
+    AfterPost = query_dentista_procAfterPost
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from lista_procedimento where especialidade = ''Dentista'';'
+    )
+    Options = []
+    Params = <>
+    left = 616
+    top = 192
+  end
+  object ds_dentista_proc: TDataSource
+    DataSet = query_list_dentista
+    left = 688
+    top = 176
+  end
+  object qr_item: TSQLQuery
+    FieldDefs = <>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from consulta_item;'
+    )
+    Options = []
+    Params = <>
+    left = 760
+    top = 184
+  end
+  object query_itens: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'GUIA'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'DESCRICAO'
+        DataType = ftString
+        Precision = -1
+        Size = 100
+      end    
+      item
+        Name = 'VALOR_UNITARIO'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select i.cod_guia as "GUIA",'
+      'i.descricao,'
+      'cast(i.valor_unitario as varchar(10)) as "VALOR_UNITARIO",'
+      'i.id'
+      'from'
+      'consulta_item as i,'
+      'consulta as c'
+      'where'
+      'c.guia = i.cod_guia'
+      'and'
+      'i.cod_guia = :v1;'
+    )
+    Options = []
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'v1'
+        ParamType = ptInput
+      end>
+    left = 816
+    top = 176
+  end
+  object ds_itens: TDataSource
+    DataSet = query_itens
+    left = 872
+    top = 184
+  end
+  object query_orcamento: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'SUM'
+        DataType = ftBCD
+        Precision = 18
+        Size = 2
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select coalesce(sum(i.valor_unitario),0) as "SUM" from'
+      'consulta_item as i,'
+      'consulta as c'
+      'where'
+      'i.cod_guia = c.guia'
+      'and'
+      'i.cod_guia = :v1;'
+    )
+    Options = []
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'v1'
+        ParamType = ptInput
+      end>
+    left = 80
+    top = 280
+  end
+  object ds_orcamento: TDataSource
+    DataSet = query_orcamento
+    left = 136
+    top = 264
+  end
+  object dentista_valor_consulta: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'VALOR_TOTAL'
+        DataType = ftBCD
+        Precision = 9
+        Size = 2
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select valor_total from consulta where guia = :v1;'
+    )
+    Options = []
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'v1'
+        ParamType = ptInput
+      end>
+    left = 208
+    top = 280
+  end
+  object ds_d_valor_consulta: TDataSource
+    DataSet = dentista_valor_consulta
+    left = 280
+    top = 264
+  end
+  object delete_item: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_MEDICO'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_GUIA'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'COD_PACIENTE'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'DESCRICAO'
+        DataType = ftString
+        Precision = -1
+        Size = 100
+      end    
+      item
+        Name = 'VALOR_UNITARIO'
+        DataType = ftBCD
+        Precision = 9
+        Size = 2
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from consulta_item;'
+    )
+    Options = []
+    Params = <>
+    left = 944
+    top = 184
+  end
+  object qr_lista_proc: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'Código'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'Descrição'
+        DataType = ftString
+        Precision = -1
+        Size = 100
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select id as "Código", descricao as "Descrição"'
+      'from consulta_item'
+      'where cod_guia = :v1;'
+    )
+    Options = []
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'v1'
+        ParamType = ptInput
+      end>
+    left = 24
+    top = 264
+  end
+  object ds_lista_proc: TDataSource
+    DataSet = qr_lista_proc
+    left = 496
+    top = 232
+  end
+  object qr_lista_proc_dentista: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'Código'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'Descrição'
+        DataType = ftString
+        Precision = -1
+        Size = 100
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select id as "Código", descricao as "Descrição"'
+      'from consulta_item'
+      'where'
+      'cod_guia = :v1;'
+    )
+    Options = []
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'v1'
+        ParamType = ptInput
+      end>
+    left = 568
+    top = 248
+  end
+  object ds_lista_proc_dentista: TDataSource
+    DataSet = qr_lista_proc_dentista
+    left = 688
+    top = 232
+  end
+  object qr_convenio: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'CONVENIO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from convenio;'
+    )
+    Options = []
+    Params = <>
+    left = 784
+    top = 232
+  end
+  object query_convenio: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'CONVENIO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end>
+    AfterDelete = query_convenioAfterDelete
+    AfterPost = query_convenioAfterPost
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from convenio;'
+    )
+    Options = []
+    Params = <>
+    left = 360
+    top = 248
+  end
+  object ds_convenio: TDataSource
+    DataSet = query_convenio
+    left = 424
+    top = 264
+  end
+  object qr_list_proc: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'PROC'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'ESPECIALIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'VALOR'
+        DataType = ftBCD
+        Precision = 9
+        Size = 2
+      end>
+    AfterDelete = qr_list_procAfterDelete
+    AfterPost = qr_list_procAfterPost
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from lista_procedimento;'
+    )
+    Options = []
+    Params = <>
+    left = 488
+    top = 296
+  end
+  object ds_list_proc: TDataSource
+    DataSet = query_list_proc
+    left = 632
+    top = 304
+  end
+  object query_list_proc: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'PROC'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'ESPECIALIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'VALOR'
+        DataType = ftBCD
+        Precision = 9
+        Size = 2
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from lista_procedimento where especialidade = :v1;'
+    )
+    Options = []
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'v1'
+        ParamType = ptInput
+      end>
+    left = 560
+    top = 304
+  end
+  object qr_empresa: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'EMP'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from empresa;'
+    )
+    Options = []
+    Params = <>
+    left = 832
+    top = 304
+  end
+  object query_empresa: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'EMP'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end>
+    AfterDelete = query_empresaAfterDelete
+    AfterPost = query_empresaAfterPost
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from empresa;'
+    )
+    Options = []
+    Params = <>
+    left = 896
+    top = 288
+  end
+  object ds_empresa: TDataSource
+    DataSet = query_empresa
+    left = 920
+    top = 232
+  end
+  object qry_empresa: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'EMP'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from empresa;'
+    )
+    Options = []
+    Params = <>
+    left = 856
+    top = 240
+  end
+  object dsy_empresa: TDataSource
+    DataSet = qry_empresa
+    left = 968
+    top = 256
+  end
+  object qry_convenio: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'CONVENIO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from convenio;'
+    )
+    Options = []
+    Params = <>
+    left = 16
+    top = 328
+  end
+  object dsy_convenio: TDataSource
+    DataSet = qry_convenio
+    left = 88
+    top = 336
+  end
+  object query_list_podologo: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'PROC'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'ESPECIALIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'VALOR'
+        DataType = ftBCD
+        Precision = 9
+        Size = 2
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from lista_procedimento where especialidade = ''Podologo'';'
+    )
+    Options = []
+    Params = <>
+    left = 168
+    top = 328
+  end
+  object ds_list_podologo: TDataSource
+    DataSet = query_list_podologo
+    left = 240
+    top = 344
+  end
+  object qr_material: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'DESCRICAO'
+        DataType = ftString
+        Precision = -1
+        Size = 100
+      end    
+      item
+        Name = 'COD_GUIA'
+        DataType = ftInteger
+        Precision = -1
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from materiais;'
+    )
+    Options = []
+    Params = <>
+    left = 296
+    top = 320
+  end
+  object query_material: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'DESCRICAO'
+        DataType = ftString
+        Precision = -1
+        Size = 100
+      end    
+      item
+        Name = 'COD_GUIA'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'QTDE'
+        DataType = ftInteger
+        Precision = -1
+      end>
+    AfterClose = query_materialAfterClose
+    AfterDelete = query_materialAfterDelete
+    AfterPost = query_materialAfterPost
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from materiais where cod_guia = :v1;'
+      ''
+    )
+    Options = []
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'v1'
+        ParamType = ptInput
+      end>
+    left = 352
+    top = 304
+  end
+  object ds_material: TDataSource
+    DataSet = query_material
+    left = 416
+    top = 320
+  end
+  object qr_plano: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'PLANO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'COD_CONV'
+        DataType = ftInteger
+        Precision = -1
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from plano;'
+    )
+    Options = []
+    Params = <>
+    left = 688
+    top = 280
+  end
+  object query_plano: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'PLANO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CONVENIO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end>
+    AfterDelete = query_planoAfterDelete
+    AfterPost = query_planoAfterPost
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select p.id, p.plano,'
+      'c.convenio'
+      'from plano as p, convenio as c'
+      'where'
+      'p.cod_conv = c.id;'
+    )
+    Options = []
+    Params = <>
+    left = 736
+    top = 296
+  end
+  object ds_plano: TDataSource
+    DataSet = query_plano
+    left = 792
+    top = 280
+  end
+  object qr_conv_plano: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'PLANO'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'COD_CONV'
+        DataType = ftInteger
+        Precision = -1
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from plano where cod_conv = :v1;'
+    )
+    Options = []
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'v1'
+        ParamType = ptInput
+      end>
+    left = 160
+    top = 392
+  end
+  object ds_conv_plano: TDataSource
+    DataSet = qr_conv_plano
+    left = 232
+    top = 408
+  end
+  object query_list_inf: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'PROC'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'ESPECIALIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'VALOR'
+        DataType = ftBCD
+        Precision = 9
+        Size = 2
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from lista_procedimento where especialidade = ''Infectologista'';'
+    )
+    Options = []
+    Params = <>
+    left = 16
+    top = 384
+  end
+  object ds_list_inf: TDataSource
+    DataSet = query_list_inf
+    left = 88
+    top = 400
+  end
+  object query_list_oftalmo: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'PROC'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'ESPECIALIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'VALOR'
+        DataType = ftBCD
+        Precision = 9
+        Size = 2
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from lista_procedimento where especialidade = ''Oftalmologista'';'
+    )
+    Options = []
+    Params = <>
+    left = 320
+    top = 368
+  end
+  object ds_list_oftalmo: TDataSource
+    DataSet = query_list_oftalmo
+    left = 392
+    top = 384
+  end
+  object query_list_cardiologista: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'PROC'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'ESPECIALIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'VALOR'
+        DataType = ftBCD
+        Precision = 9
+        Size = 2
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from lista_procedimento where especialidade = ''Cardiologista'';'
+    )
+    Options = []
+    Params = <>
+    left = 480
+    top = 352
+  end
+  object ds_list_cardiologista: TDataSource
+    DataSet = query_list_cardiologista
+    left = 560
+    top = 368
+  end
+  object qr_hora: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'HORA_ENTRADA'
+        DataType = ftString
+        Precision = -1
+        Size = 5
+      end    
+      item
+        Name = 'HORA_SAIDA'
+        DataType = ftString
+        Precision = -1
+        Size = 5
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select coalesce(hora_entrada,0) as "HORA_ENTRADA",'
+      'coalesce(hora_saida,0) as "HORA_SAIDA"'
+      'from medico'
+      'where id = :v1;'
+    )
+    Options = []
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'v1'
+        ParamType = ptInput
+      end>
+    left = 648
+    top = 360
+  end
+  object query_list_dentista: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'PROC'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'ESPECIALIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'VALOR'
+        DataType = ftBCD
+        Precision = 9
+        Size = 2
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from lista_procedimento where especialidade = ''Dentista'';'
+    )
+    Options = []
+    Params = <>
+    left = 736
+    top = 352
+  end
+  object ds_list_dentista: TDataSource
+    DataSet = query_list_dentista
+    left = 832
+    top = 360
+  end
+  object qry_list_dentista: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'PROC'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'ESPECIALIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'VALOR'
+        DataType = ftBCD
+        Precision = 9
+        Size = 2
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from lista_procedimento where especialidade = ''Dentista'';'
+    )
+    Options = []
+    Params = <>
+    left = 688
+    top = 400
+  end
+  object list_dentista: TDataSource
+    DataSet = qry_list_dentista
+    left = 768
+    top = 400
+  end
+  object qry_list_cardiologista: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'PROC'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'ESPECIALIDADE'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'VALOR'
+        DataType = ftBCD
+        Precision = 9
+        Size = 2
+      end>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from lista_procedimento where especialidade = ''Cardiologista'';'
+    )
+    Options = []
+    Params = <>
+    left = 464
+    top = 408
+  end
+  object list_cardiologista: TDataSource
+    DataSet = qry_list_cardiologista
+    left = 568
+    top = 424
+  end
+  object qry_plano: TSQLQuery
+    FieldDefs = <>
+    Database = ibSistema
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from plano;'
+    )
+    Options = []
+    Params = <>
+    left = 920
+    top = 352
+  end
+end

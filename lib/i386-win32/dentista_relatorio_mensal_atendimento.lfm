@@ -1,0 +1,307 @@
+object t_dentista_relatorio_mensal: Tt_dentista_relatorio_mensal
+  Left = 262
+  Height = 523
+  Top = 98
+  Width = 817
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Dentista - Relatório Mensal de Atendimento'
+  ClientHeight = 523
+  ClientWidth = 817
+  Color = clWhite
+  OnClose = FormClose
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.6.4.0'
+  object DBGrid1: TDBGrid
+    Left = 24
+    Height = 220
+    Top = 280
+    Width = 768
+    Color = clWindow
+    Columns = <>
+    DataSource = DM.ds_rel_mensal_atendimento
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object GroupBox1: TGroupBox
+    Left = 24
+    Height = 57
+    Top = 16
+    Width = 768
+    Caption = 'Dados do Paciente'
+    ClientHeight = 37
+    ClientWidth = 764
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 16
+      Height = 16
+      Top = 8
+      Width = 56
+      Caption = 'Paciente'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object db_txt_paciente: TDBEdit
+      Left = 80
+      Height = 23
+      Top = 1
+      Width = 296
+      DataField = 'NOME'
+      DataSource = DM.ds_rel_mensal_atendimento
+      CharCase = ecNormal
+      Enabled = False
+      MaxLength = 0
+      TabOrder = 0
+    end
+    object Label2: TLabel
+      Left = 384
+      Height = 16
+      Top = 8
+      Width = 60
+      Caption = 'Matrícula'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object db_txt_id: TDBEdit
+      Left = 456
+      Height = 23
+      Top = 1
+      Width = 64
+      DataField = 'ID'
+      DataSource = DM.ds_rel_mensal_atendimento
+      CharCase = ecNormal
+      Enabled = False
+      MaxLength = 0
+      TabOrder = 1
+    end
+    object Label3: TLabel
+      Left = 528
+      Height = 16
+      Top = 8
+      Width = 59
+      Caption = 'Convênio'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object db_txt_convenio: TDBEdit
+      Left = 600
+      Height = 23
+      Top = 1
+      Width = 152
+      DataField = 'CONVENIO'
+      DataSource = DM.ds_rel_mensal_atendimento
+      CharCase = ecNormal
+      Enabled = False
+      MaxLength = 0
+      TabOrder = 2
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 24
+    Height = 80
+    Top = 80
+    Width = 769
+    Caption = 'Dados da Consulta'
+    ClientHeight = 60
+    ClientWidth = 765
+    TabOrder = 2
+    object Label4: TLabel
+      Left = 16
+      Height = 16
+      Top = 8
+      Width = 89
+      Caption = 'Procedimento'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object db_txt_procedimento: TDBEdit
+      Left = 112
+      Height = 23
+      Top = 1
+      Width = 640
+      DataField = 'PROCEDIMENTO'
+      DataSource = DM.ds_rel_mensal_atendimento
+      CharCase = ecNormal
+      Enabled = False
+      MaxLength = 0
+      TabOrder = 0
+    end
+    object Label5: TLabel
+      Left = 16
+      Height = 16
+      Top = 36
+      Width = 111
+      Caption = 'Data da Consulta'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object db_txt_data: TDBEdit
+      Left = 136
+      Height = 23
+      Top = 32
+      Width = 80
+      DataField = 'DATA_CONSULTA'
+      DataSource = DM.ds_rel_mensal_atendimento
+      CharCase = ecNormal
+      Enabled = False
+      MaxLength = 0
+      TabOrder = 1
+    end
+    object Label6: TLabel
+      Left = 232
+      Height = 16
+      Top = 36
+      Width = 48
+      Caption = 'Horário'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object db_txt_hora: TDBEdit
+      Left = 288
+      Height = 23
+      Top = 32
+      Width = 80
+      DataField = 'HORA'
+      DataSource = DM.ds_rel_mensal_atendimento
+      CharCase = ecNormal
+      Enabled = False
+      MaxLength = 0
+      TabOrder = 2
+    end
+  end
+  object GroupBox3: TGroupBox
+    Left = 24
+    Height = 56
+    Top = 168
+    Width = 768
+    Caption = 'Dados Financeiros'
+    ClientHeight = 36
+    ClientWidth = 764
+    TabOrder = 3
+    object Label7: TLabel
+      Left = 16
+      Height = 16
+      Top = 8
+      Width = 136
+      Caption = 'Forma de Pagamento'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object db_txt_pagamento: TDBEdit
+      Left = 160
+      Height = 23
+      Top = 0
+      Width = 264
+      DataField = 'FORMA_PAGAMENTO'
+      DataSource = DM.ds_rel_mensal_atendimento
+      CharCase = ecNormal
+      Enabled = False
+      MaxLength = 0
+      TabOrder = 0
+    end
+    object Label8: TLabel
+      Left = 440
+      Height = 16
+      Top = 7
+      Width = 114
+      Caption = 'Valor da Consulta'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object db_txt_valor: TDBEdit
+      Left = 568
+      Height = 23
+      Top = 1
+      Width = 184
+      DataField = 'VALOR_TOTAL'
+      DataSource = DM.ds_rel_mensal_atendimento
+      CharCase = ecNormal
+      Enabled = False
+      MaxLength = 0
+      TabOrder = 1
+    end
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 24
+    Height = 41
+    Top = 232
+    Width = 360
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 41
+    ClientWidth = 360
+    DataSource = DM.ds_rel_mensal_atendimento
+    Options = []
+    TabOrder = 4
+    VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbRefresh]
+  end
+  object Button1: TButton
+    Left = 400
+    Height = 41
+    Top = 232
+    Width = 160
+    Caption = 'Gerar Relatório em PDF'
+    TabOrder = 5
+  end
+end
